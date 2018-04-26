@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="../css/myCart.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/fontIcon.css">
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#content>a').click(function(){
+				$('#content>a').removeAttr('style');
+				$(this).css('color','rgb(255,89,119');
+				$(this).css('border-bottom', '3px solid rgb(255,85,119)');
+			});
+
+			$('.arrowdown').hover(function(){
+				$(this).find('.cart_coupon').show();
+			},function(){
+				$(this).find('.cart_coupon').hide();
+			})
+
+			$('#content table tr td button').click(function(){
+				var v = $('#content table tr td input[type=text]').val();
+				console.log(v);
+				var flag = $(this).attr('id');
+				if (flag == 'div') {
+					v -= 1;
+					if (v <= 0) {
+						v = 1;
+					}
+					$(this).next().val(v);
+				}else{
+					v = parseInt(v);
+					v += 1; 
+					if(v > 99){
+						v = 99 ;
+					}
+					$(this).prev().val(v);
+				}
+				if ( v <= 1) {
+					$('#content table tr td button#div').attr('disabled','disabled');
+				}else{
+					$('#content table tr td button#div').removeAttr('disabled');
+				}
+				if ( v >= 99) {
+					$('#content table tr td button#plus').attr('disabled','disabled');
+				}else{
+					$('#content table tr td button#plus').removeAttr('disabled');
+				}
+			});
+
+			
+
+			$('input[type=checkbox]').click(function(){
+				var flag = $('input[type=checkbox]').is(':checked');
+				// console.log(flag);
+			})
+
+			var isClick = 0;
+
+			$('input[type=checkbox]').last().click(function(){
+				isClick ++;
+				console.log(isClick);
+				console.log(isClick % 2 == 0);
+				if (isClick % 2 == 0) {
+					$('input[type=checkbox]').removeAttr('checked');
+				}else{
+					$('input[type=checkbox]').attr('checked','checked');
+				}
+			});
+			$('input[type=checkbox]').first().click(function(){
+				isClick ++;
+				if (isClick % 2 == 0) {
+					$('input[type=checkbox]').removeAttr('checked');
+				}else{
+					$('input[type=checkbox]').attr('checked','checked');
+				}
+			});
+
+			$('input[type=checkbox]').click(function(){
+				if ($('input[type=checkbox]').is(':checked')) {
+					$('#fRight').find('button').css('background-color', 'rgb(255,167,1)');
+				}else{
+					$('#fRight').find('button').removeAttr('style');
+				}
+			});
+
+			
+
+			$('#content table tr:nth-child(even) td input[type=checkbox]').is(':checked');
+
+			$('#fRight button').click(function(){
+				window.location.href="order.html";
+			})
+
+		});
+	</script>
+</head>
+<body>
+	<div id="top">
+		<a href="index.html">
+			<p class="home"></p>
+			蘑菇街首页
+		</a>
+		<ul>
+			<li><a href="#">qq_asdffdfd</a><p class="down"></p>
+				<div id="user" class="top_marsk" hidden="hidden">
+					<ul>
+						<li><a href="#">个人设置</a></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><a href="#">消息</a></li>
+			<li class="line">|</li>
+			<li><a href="#">我的收藏</a><p class="down"></p>
+				<div id="collection" class="top_marsk" hidden="hidden">
+					<ul>
+						<li><a href="#">收藏的商品</a></li>
+						<li><a href="#">收藏的小店</a></li>
+						<li><a href="#">浏览足迹</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><p class="order"></p><a href="#">我的订单</a></li>
+			<li class="line">|</li>
+			<li><p class="cart"></p><a href="#">购物车<font style="color: rgb(255,0,119); font-size:12px;">2</font>件</a>
+				<div id="shopMarsk" class="top_marsk" hidden="hidden">
+			 		<ul>
+			 			<li>
+			 				<img src="../imgs/order_little1.jpg" alt="爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色">
+			 				<a href="#">爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色</a>
+			 				<span>￥89.00</span>
+			 				<p>颜色：黄 尺码：M</p>
+			 				<del>删除</del>
+			 			</li>
+			 			<li>
+			 				<img src="../imgs/order_little1.jpg" alt="爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色">
+			 				<a href="#">爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色</a>
+			 				<span>￥89.00</span>
+			 				<p>颜色：黄 尺码：M</p>
+			 				<del>删除</del>
+			 			</li>
+			 		</ul>
+			 		<hr>
+			 		<button>查看购物车</button>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><a href="#">客户服务</a><p class="down"></p>
+				<div id="serviceMarsk" class="top_marsk" hidden="hidden">
+				<ul>
+					<li><a href="#">消费者服务</a></li>
+					<li><a href="#">商家中心</a></li>
+					<li><a href="#">规则中心</a></li>
+				</ul>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><p class="shop"></p><a href="#">我的小店</a><p class="down"></p>
+				<div id="myshopMarsk" class="top_marsk" hidden="hidden">
+				<ul>
+					<li><a href="#">管理后台</a></li>
+					<li><a href="#">商家社区</a></li>
+					<li><a href="#">商家培训</a></li>
+					<li><a href="#">市场入驻</a></li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="head">
+		<img src="../imgs/order_logo.png">
+		<div id="progress">
+			<div id="progress_line">
+				<i class="pro1">1</i>
+				<div id="progress_line2">
+					<i class="pro2">2</i>
+					<i class="pro3">3</i>
+					<i class="pro4">4</i>
+				</div>
+			</div>
+			<p class="p1">购物车</p>
+			<p class="p2">确认订单</p>
+			<p class="p3" style="color: rgb(165,192,227)">支付</p>
+			<p class="p4" style="color: rgb(165,192,227)">完成</p>
+		</div>
+	</div>
+
+	<div id="content">
+		<a href="#">全部商品2</a>
+		<a href="#">优惠2</a>
+		<a href="#">库存紧张0</a>
+		<table>
+			<thead>
+				<tr>
+					<td><input type="checkbox" name=""> 全选 </td>
+					<td>商品信息</td>
+					<td>单价（元）</td>
+					<td>数量</td>
+					<td>小计（元）</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="6"><input type="checkbox" name="">
+						<h6>滴油旗舰店</h6>
+						<img src="../imgs/goods_icon6.gif">
+						<img src="../imgs/mabyLike_little1.png">
+						<i></i>
+						<p>满89元减5</p>
+						<div class="fontIcon arrowdown">优惠卷 &#xe61c
+							<div class="cart_coupon" hidden="hidden">
+								<ul>
+									<li>
+										<span class="fontIcon close">&#xe60e</span>
+									</li>
+									<li>
+										<h3>5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button>领取</button>
+									</li>
+									<li class="line"></li>
+									<li>
+										<h3>5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button>领取</button>
+									</li>
+									<li class="line"></li>
+									<li>
+										<h3>5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button>领取</button>
+									</li>
+									<li class="line"></li>
+									<li>
+										<h3 style="background-color: rgb(255,142,51);">5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button style="border: none">无需领取</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a href="#">去店铺凑单></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="">
+						<img src="../imgs/goods_details_little.jpg">
+						<a href="#" title="迪悠羊羔毛外套女飞行员夹克2017新款秋冬季宽松机车服韩版">迪悠羊羔毛外套女飞行员夹克2017新款秋冬季宽松机车服韩版</a>
+						<!-- <div id="forImg">
+							<img src="../imgs/cart_big1.jpg" >
+						</div> -->
+					</td>
+					<td>
+						<h2>颜色：卡其</h2>
+						<h2>尺码：均码</h2>
+					</td>
+					<td>
+						<del>￥328.00</del>
+						<p>$229.00</p>
+						<span>新品促销</span>
+					</td>
+					<td>
+						<button id="div">-</button>
+						<input type="text" name="" value="1">
+						<button id="plus">+</button>
+					</td>
+					<td><em>229.00</em></td>
+					<td><h4>删除</h4></td>
+				</tr>
+				<tr>
+					<td colspan="6"><input type="checkbox" name="">
+						<h6>爱爱丸旗舰店</h6>
+						<img src="../imgs/goods_icon6.gif">
+						<img src="../imgs/mabyLike_little1.png">
+						<i>.</i>
+						<p>满189元减15</p>
+						<div class="fontIcon arrowdown">优惠卷 &#xe61c
+							<div class="cart_coupon" hidden="hidden">
+								<ul>
+									<li>
+										<span class="fontIcon close">&#xe60e</span>
+									</li>
+									<li>
+										<h3>5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button>领取</button>
+									</li>
+									<li class="line"></li>
+									<li>
+										<h3>5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button>领取</button>
+									</li>
+									<li class="line"></li>
+									<li>
+										<h3>5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button>领取</button>
+									</li>
+									<li class="line"></li>
+									<li>
+										<h3 style="background-color: rgb(255,142,51);">5元</h3>
+										<p>满89元立减</p>
+										<span>2017.12.13-2018.2.3</span>
+										<button style="border: none">无需领取</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a href="#">去店铺凑单</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="">
+						<img src="../imgs/cart_little2.jpg">
+						<img src="../imgs/cart_big2.jpg">
+						<a href="#" title="爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色">
+							爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色</a>
+					</td>
+					<td>
+						<h2>颜色：黄色</h2>
+						<h2>尺码：M</h2>
+					</td>
+					<td>
+						<del>$423.00</del>
+						<p>$218.00</p>
+						<span>品牌促销</span>
+					</td>
+					<td>
+						<button id="div">-</button>
+						<input type="text" name="" value="1">
+						<button id="plus">+</button>
+					</td>
+					<td><em>218.00</em></td>
+					<td><h4>删除</h4></td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="cart_pay_bat">
+			<input type="checkbox" name="">
+			<em>全选</em>
+			<a href="#">删除</a>
+			<a href="#">清空失效商品</a>
+			<a href="#">移入收藏夹</a>
+			<div id="fRight">
+				
+				<p>共有<font style="color: rgb(255,89,199)">0</font>件商品，总计：</p>
+				<span style="color: rgb(255,89,199)">￥0.00</span>
+				<button>去付款></button>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="sidebar">
+		<ul>
+			<li style="height: 80px;"></li>
+			<li>
+				<p class="bar_cart"></p>
+				<span>购物车</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="coupon"></p>
+				<span>优惠券</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="wallet"></p>
+				<span>钱包</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="footmark"></p>
+				<span>足迹</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li height="40px" hidden="hidden">
+				<p class="top" ></p>
+			</li>
+		</ul>
+	</div>
+
+	<div id="bottom">
+		<div class="content">
+			<h4>-新手帮助-</h4>
+			<span>
+			<a href="#">常见问题</a>
+			<a href="#">自助服务</a>
+			<a href="#">联系客服</a>
+			<a href="#">意见反馈</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-权益保障-</h4>
+			<span>
+			<a>全国包邮</a>
+			<a>七天无理由退货</a>
+			<a>退货运费补贴</a>
+			<a>限时发货</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-支付方式-</h4>
+			<span>
+			<a>微信支付</a>
+			<a>支付宝</a>
+			<a>白富美支付</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-移动客户端下载-</h4>
+			<span>
+			<a>蘑菇街</a><!-- <img src="../imgs/二维码.png"> -->
+			<a>美丽说</a>
+			<a>uni引力</a>
+			</span>
+		</div>
+		<hr style=" height:2px;border:none;border-top:2px solid rgb(255,87,119);width: 1210px; margin: 0px auto;">
+		<ul>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">招聘信息</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">商家入驻</a></li>
+			<li><a href="#">商家后台</a></li>
+			<li><a href="#">蘑菇商学院</a></li>
+			<li><a href="#">商家社区</a></li>
+			<li><a href="#">规则中心</a></li>
+			<li><a href="#">有害信息举报</a></li>
+			<span>@2017 Mogujie.com 杭州卷皮网络有限公司</span><br>
+			<span id="button_line2">营业执照:913301065526808764 | 网络文化经营许可证：浙江文（2016） 0349-219 | 增值电信业务经营许可证：浙B2-20110349 | 安全责任书 | 浙江网安倍 33010602002329</span>
+		</ul>
+	</div>
+</body>
+</html>

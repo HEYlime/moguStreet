@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<link rel="stylesheet" type="text/css" href="../css/comm.css">
+	<link rel="stylesheet" type="text/css" href="../css/goods_details.css">
+	<link rel="stylesheet" type="text/css" href="../css/fontIcon.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/myscroll.js"></script>
+	<script type="text/javascript" src="../js/comm.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.intoCart').click(function(event) {
+				window.location.href='myCart.html';
+			});
+			$('#buy').click(function(event) {
+				window.location.href="order.html"
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="top">
+		<p class="home"></p>
+		<a href="#" id="index">蘑菇街首页</a>
+		<ul>
+			<li>
+				<a href="#">
+				<span>登陆</span>
+				</a>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="order"></p>
+					<span>我的订单</span>
+				</a>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="cart"></p>
+					<span>购物车</span>
+				</a>
+				<div id="shoopMarsk" hidden="hidden" class="top_marsk" style="display: none;">
+			 		<h2>购物车里没有商品！</h2>
+				</div>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<span>客户服务</span>
+					<p class="down"></p>
+				</a>
+				<div id="serviceMarsk" class="top_marsk">
+				<ul>
+					<li>消费者服务</li>
+					<li>商家中心</li>
+					<li>规则中心</li>
+				</ul>
+				</div>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="shop"></p>
+					<span>我的小店</span>
+					<p class="down"></p>
+				</a>
+				<div id="myshopMarsk" class="top_marsk" style="display: none;">
+				<ul>
+					<li>管理后台</li>
+					<li>商家社区</li>
+					<li>商家培训</li>
+					<li>市场入驻</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div id="head">
+		<div id="head_left">
+			<div id="shop_info">
+				<img src="../imgs/goods_logo.jpg">
+				<h1>MOGU小象</h1>
+				<p class="star">&#xE628 &#xE628</p>
+				<span>描述<p>4.46</p>质量<p>4.46</p>服务<p>4.64</p></span>
+				<div id="shop_info_detail" hidden="hidden">
+					<div id="info_detail_left">
+						<ol>
+							<li>
+								<span>所在地区：</span>
+								<p>浙江省杭州市</p>
+							</li>
+							<li>
+								<span>商品数：</span>
+								<p>101</p>
+							</li>
+							<li>
+								<span>收藏数：</span>
+								<p>35526</p>
+							</li>
+							<li>
+								<span>销售量：</span>
+								<p>104273</p>
+							</li>
+							<li>
+								<span>创建时间：</span>
+								<p>2014年03月06日</p>
+							</li>
+							<li>
+								<span>店铺保证金：</span>
+								<p>已缴纳</p>
+							</li>
+							<li>
+								<img src="../imgs/goods_realName.png">
+							</li>
+							<li>
+								<button>查看详情</button>
+							</li>
+						</ol>
+					</div>
+					<div id="info_detail_right">
+						<ol>
+							<li>
+								<p>动态评分</p>
+								<span></span>
+							</li>
+							<li>
+								<p>比同行平均</p>
+								<span></span>
+							</li>
+							<li>
+								<p>描述相符：<span>4.46</span></p>
+								<span></span>
+							</li>
+							<li>
+								<p><span class="green_block">低</span>3.71%</p>
+								<span></span>
+							</li>
+							<li>
+								<p>质量满意：<span>4.45</span></p>
+								<span></span>
+							</li>
+							<li>
+								<p><span class="green_block">低</span>3.70%</p>
+								<span></span>
+							</li>
+							<li>
+								<p>服务周到：<span>4.54</span></p>
+								<span></span>
+							</li>
+							<li>
+								<p><span class="green_block">低</span>3.40%</p>
+								<span></span>
+							</li>
+							<li class="line"><hr></li>
+							<li class="line"></li>
+							<li>
+								<p>本店</p>
+								<span></span>
+							</li>
+							<li>
+								<p>行业</p>
+								<span></span>
+							</li>
+							<li>
+								<p>平均发货时间：<span>1.43</span>天</p>
+								<span></span>
+							</li>
+							<li>
+								<p>1.08 天</p>
+								<span></span>
+							</li>
+							<li>
+								<p>退货率：<span class="red_font">15.33%</span></p>
+								<span></span>
+							</li>
+							<li>
+								<p>6.23 %</p>
+								<span></span>
+							</li>
+							<li>
+								<p>有效投诉率：<span>0.35%</span></p>
+								<span></span>
+							</li>
+							<li>
+								<p>0.05 %</p>
+								<span></span>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div id="buttons">
+				<button><b>+</b>收藏</button>
+				<button><img src="../imgs/goods_icon6.gif">私聊</button>
+				<img src="../imgs/goods_down.png">
+			</div>
+		</div>
+		
+		<input type="text" placeholder="秋裤"><button>搜全站</button><button>搜本店</button>
+		
+	</div>
+	<img src="../imgs/goods_shopLog.jpg" style="width: 1260px; height: 150px;">
+	<div id="head_nav">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li class="head_nav_line">|</li>
+			<li>
+				<a href="#">全部商品<p class="goods_down"></p></a>
+				<div id="all_goods" hidden="hidden">
+					<ul>	
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">针织衫/毛衣</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<img src="../imgs/all_goods_toLeft.png">
+							<a href="#">爆款热销</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="head_nav_line">|</li>
+		</ul>
+	</div>
+	<div id="box">
+		<div id="detail">
+			<img src="../imgs/goods_details_big.jpg" style="width: 400px; height: 600px;">
+			<div id="detail_info">
+				<h1>毛呢外套女中长款冬季新款韩国加厚矮个子chic格子呢子大衣潮</h1>
+				<dl>
+					<dt>价格：<del>$888.00</del></dt>
+					<dd>促销价：<span>$588.00</span><p>评价：<em>60 </em>累计评价：<em>280</em></p></dd>
+				</dl>
+				<ul>
+					<li><span>客服：</span><button><img src="../imgs/goods_icon6.gif">联系客服</button></li>
+					<li><span>颜色：</span><img title="千鸟格" src="../imgs/goods_details_big.jpg"></li>
+					<li><span>尺码：</span><button>S</button><button>M</button><button>L</button></li>
+					<li><span>数量：</span><button id="div">-</button><input type="text" value="1" readonly="readonly"><button id="plus">+</button> <p>库存1299件</p></li>
+				</ul>
+				<button id="buy">立即购买</button><button class="intoCart">加入购物车</button><br>
+				<h3 class="staractive">&#xe610 91</h3><h4><p class="red_plus"></p><span>分享</span><em hidden="hidden" class="share"></em>
+				</h4><p>举报</p>
+				<ol>
+					<li>服务承诺：</li>
+					<li><img src="../imgs/goods_icon3.png"><p>全国包邮</p><img src="../imgs/goods_detials_icon3.png"><p>七天无理由退货</p><img src="../imgs/goods_icon1.png"><p>退货补运费</p></li>
+				</ol>
+				<span>支付方式：</span><p class="payWay"></p>
+			</div>
+			<div id="more_goods">
+				<p>- 热卖推荐 -</p>
+				<img src="../imgs/goods_left4.jpg"><span>$229</span>
+				<img src="../imgs/goods_left3.jpg"><span>$239</span>
+				<img src="../imgs/goods_left2.jpg"><span>$289</span>
+			</div>
+		</div>
+		
+		<div id=moreInfo>
+			<div class="fix" id="moreInfo_nav">
+				<div><h3>MUGU小象<img src="../imgs/goods_icon6.gif" alt=""></h3></div>
+				<div>
+					<ul>
+						<li><a href="#moreInfo_middle_top">商品详情</a></li>
+						<li><a href="#moreInfo_middle_top2">累计评价</a></li>
+						<li><a href="#moreInfo_middle_top3">本店同类商品</a></li>
+						<li></li>
+					</ul>
+				</div>
+				<div>
+					<p>手机扫码下单</p><h1 class="twod"></h1><h2 class="goods_down"></h2>
+					<h6 hidden="hidden"><img hidden="hidden" src="../imgs/twod.png"></h6>
+				</div>
+			</div> 
+			<div id="moreInfo_left">
+				<div id="moreInfo_left_top">
+					<ul>
+						<li>
+							<p>描述</p>
+							<span>4.44</span>
+						</li>
+						<!-- <li class="line"><hr></li> -->
+						<li>
+							<p>质量</p>
+							<span>4.43</span>
+						</li>
+						<!-- <li class="line"><hr></li> -->
+						<li>
+							<p>服务</p>
+							<span>4.52</span>
+						</li>
+					</ul>
+					<button>收藏店铺</button>
+					<button>进入店铺</button>
+					<h1>------------- <p class="goods_up"></p> -------------</h1>
+					<a href="#"><img src="../imgs/goods_little2.png"></a>
+				</div>
+				<div id="moreInfo_left_middle">
+					<h1>本店分类</h1>
+					<ul>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">全部商品</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">衬衫、雪纺衫</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">针织衫/毛衣</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">衬衫、雪纺衫</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">针织衫/毛衣</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">衬衫、雪纺衫</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">针织衫/毛衣</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">爆款热销</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">衬衫、雪纺衫</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">针织衫/毛衣</a>
+						</li>
+						<li>
+							<p class="goods_right"></p>
+							<a href="#">爆款热销</a>
+						</li>
+					</ul>
+				</div>
+				<div id="moreInfo_left_bottom">
+					<h1>看了又看</h1>
+					<ul>
+						<li>
+							<img src="../imgs/goods_left1.jpg" alt="">
+							<a>格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$229.00</span>
+							<p class="love"></p><h1>2233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left2.jpg" alt="">
+							<a>冬季新款韩版大毛领连帽短款呢子大衣女宽松加厚小个子毛呢外套潮</a>
+							<span>$448.00</span>
+							<p class="love"></p><h1>2233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left3.jpg" alt="">
+							<a>
+							毛呢外套女中长款韩版2017新款双排扣宽松加厚茧型呢子大衣女
+							</a>
+							<span>$338.00</span>
+							<p class="love"></p><h1>233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left1.jpg" alt="">
+							<a>格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$229.00</span>
+							<p class="love"></p><h1>4233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left2.jpg" alt="">
+							<a>冬季新款韩版大毛领连帽短款呢子大衣女宽松加厚小个子毛呢外套潮</a>
+							<span>$448.00</span>
+							<p class="love"></p><h1>8233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left3.jpg" alt="">
+							<a>
+							毛呢外套女中长款韩版2017新款双排扣宽松加厚茧型呢子大衣女
+							</a>
+							<span>$338.00</span>
+							<p class="love"></p><h1>5233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left1.jpg" alt="">
+							<a>格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$229.00</span>
+							<p class="love"></p><h1>8333</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left2.jpg" alt="">
+							<a>冬季新款韩版大毛领连帽短款呢子大衣女宽松加厚小个子毛呢外套潮</a>
+							<span>$448.00</span>
+							<p class="love"></p><h1>9733</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left3.jpg" alt="">
+							<a>
+							毛呢外套女中长款韩版2017新款双排扣宽松加厚茧型呢子大衣女
+							</a>
+							<span>$338.00</span>
+							<p class="love"></p><h1>8233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left1.jpg" alt="">
+							<a>格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$229.00</span>
+							<p class="love"></p><h1>4233</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left2.jpg" alt="">
+							<a>冬季新款韩版大毛领连帽短款呢子大衣女宽松加厚小个子毛呢外套潮</a>
+							<span>$448.00</span>
+							<p class="love"></p><h1>2833</h1>
+						</li>
+						<li>
+							<img src="../imgs/goods_left3.jpg" alt="">
+							<a>
+							毛呢外套女中长款韩版2017新款双排扣宽松加厚茧型呢子大衣女
+							</a>
+							<span>$338.00</span>
+							<p class="love"></p><h1>24433</h1>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="moreInfo_middle">
+				<div id="moreInfo_middle_top">
+					<h1 id="desc">商品描述</h1>
+					<p>这件呢大衣用的是那种软糯的，但不会容易起皱的面料 即使是正常穿着站立，也有小廓形，上身都比 较垂坠显瘦，文艺有范儿的格子优雅严谨 是不可割舍的情怀，门襟的三粒扣可以自由拆卸 是低调高雅气质，侧身口袋，满足了大多菇凉怕冷的心 穿多了纯色大衣，不妨试试这件格子外套吧</p>
+					<h1 id="args">产品参数</h1>
+					<table id="J_ParameterTable" class="parameter-table" >    
+						<tr class="">    
+							<td>图案: 格子,千鸟格</td>          
+							<td>颜色: 千鸟格</td>          
+							<td>袖型: 插肩袖</td>    
+						</tr>      
+						<tr class="">    
+							<td>衣门襟: 多粒单排扣</td>          
+							<td>尺码: S,L,M</td>          
+							<td>衣长: 中长款（66-80cm）</td>    
+						</tr>      
+						<tr class="">    
+							<td>版型: 直身</td>          
+							<td>季节: 秋冬</td>          
+							<td>材质: 毛呢</td>    
+						</tr>      
+						<tr class="">    
+							<td>领型: 其他领型</td>          
+							<td>元素: Oversized,撞色/拼色</td>          
+							<td>袖长: 长袖</td>    
+						</tr>      
+						<tr class="">    
+							<td>风格: 通勤（OL）</td>          
+							<td>潮流: 韩系</td>    
+						</tr>    
+					</table>
+					<h1 id="effect">穿着效果</h1>
+					<img src="../imgs/goods_big2.jpg">
+					<img src="../imgs/goods_big3.jpg">
+					<img src="../imgs/goods_big4.jpg">
+					<img src="../imgs/goods_big5.jpg">
+					<img src="../imgs/goods_big4.jpg">
+					<img src="../imgs/goods_big3.jpg">
+					<img src="../imgs/goods_big5.jpg">
+					<img src="../imgs/goods_big3.jpg">
+					<img src="../imgs/goods_big4.jpg">
+					<img src="../imgs/goods_big5.jpg">
+					<img src="../imgs/goods_big6.jpg" style="height: 200px;">
+					<h1 id="size">尺码说明</h1>
+					<table id="size-table" class="size-table">  
+						<thead>                                   
+							<tr>  
+								<td>尺码</td>  
+								<td>胸围</td>  
+								<td>袖长</td>  
+								<td>肩宽</td>  
+								<td>衣长</td>  
+							</tr>         
+						</thead> 
+						<tbody>     
+							<tr>  
+								<td>S</td>  
+								<td>132</td>  
+								<td>35</td>  
+								<td>61</td>  
+								<td>88</td>  
+							</tr>    
+							<tr>  
+								<td>M</td>  
+								<td>136</td>  
+								<td>36</td>  
+								<td>61</td>  
+								<td>89</td>  
+							</tr>    
+							<tr>  
+								<td>L</td>  
+								<td>140</td>  
+								<td>37</td>  
+								<td>62</td>  
+								<td>90</td>  
+							</tr>   
+						</tbody>  
+					</table>
+					<h3>※ 以上尺寸为实物人工测量，因测量当时不同会有1-2cm误差，相关数据仅作参考，以收到实物为准。</h3>
+					<h1 id="comType">本店同类商品</h1>
+					<ul>
+						<li>
+							<img src="../imgs/goods_bottom1.jpg" alt="">
+							<a href="#">呢大衣女中长款韩版秋冬2017新款韩国过膝茧型格子呢子外套潮
+							</a>
+							<span>$449.00</span>
+							<p class="love"></p><p>234</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom2.jpg" alt="">
+							<a href="#">MOGU马卡龙紫九分袖毛呢外套</a>
+							<span>$388.00</span>
+							<p class="love"></p><p>243</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom3.jpg" alt="">
+							<a href="#">格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$599.00</span>
+							<p class="love"></p><p>546</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom1.jpg" alt="">
+							<a href="#">呢大衣女中长款韩版秋冬2017新款韩国过膝茧型格子呢子外套潮
+							</a>
+							<span>$449.00</span>
+							<p class="love"></p><p>1233</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom2.jpg" alt="">
+							<a href="#">MOGU马卡龙紫九分袖毛呢外套</a>
+							<span>$388.00</span>
+							<p class="love"></p><p>3244</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom3.jpg" alt="">
+							<a href="#">格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$599.00</span>
+							<p class="love"></p><p>546</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom1.jpg" alt="">
+							<a href="#">呢大衣女中长款韩版秋冬2017新款韩国过膝茧型格子呢子外套潮
+							</a>
+							<span>$449.00</span>
+							<p class="love"></p><p>234</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom2.jpg" alt="">
+							<a href="#">MOGU马卡龙紫九分袖毛呢外套</a>
+							<span>$388.00</span>
+							<p class="love"></p><p>243</p>
+						</li>
+					</ul>
+				</div>
+				<div id="moreInfo_middle_top2" hidden="hidden">
+					<h1>累计评价</h1>
+					<ul>
+						<li><span class="stars"></span><h2>5.0分</h2></li>
+						<li><p>描述相符</p><span class="starts"></span><em>5.0分</em></li>
+						<li><p>商品质量</p><span class="starts"></span><em>5.0分</em></li>
+					</ul>
+					<h3>全部评价(7)<em>晒图(0)</em></h3>
+
+					<div id="comments">
+						<div class="comment">
+							<img src="../imgs/goods_little.jpg">
+							<h1>赶***a<p>2017-1-6</p></h1>
+							<p>嗯，收到宝贝啦，发货超给力，发货后快递很给力三天就到啦，打开后除了衣领有些褶皱其他都还好，上身效果还是不错的，我买的S码，挺好的，韩范十足。整体这个价位还是超值的，冬天穿很暖和，外型也不会臃肿，很好看。买的时候还没评价，很忐忑，收到还是不错的，所以写下详情希望可以给想买的小仙女们参考下。</p>
+							<span>是否合身: 合身</span>
+						</div>
+						<div class="comment">
+							<img src="../imgs/goods_little.jpg">
+							<h1>q***p <p>2017-1-6</p></h1>
+							<p>卖家果然没让人失望，这个款型比较百搭，扎头发起来穿个小白鞋就活泼很多，头发披着又显得很女人，深色浅色的内搭都可以配，出来的风格都不一样，也不显得臃肿，风度温度都有啦，面料很软，也厚，超爱的。</p>
+							<span>是否合身: 合身</span>
+						</div>
+						<div class="comment">
+							<img src="../imgs/goods_little.jpg">
+							<h1>赶***a<p>2017-1-6</p></h1>
+							<p>嗯，收到宝贝啦，发货超给力，发货后快递很给力三天就到啦，打开后除了衣领有些褶皱其他都还好，上身效果还是不错的，我买的S码，挺好的，韩范十足。整体这个价位还是超值的，冬天穿很暖和，外型也不会臃肿，很好看。买的时候还没评价，很忐忑，收到还是不错的，所以写下详情希望可以给想买的小仙女们参考下。</p>
+							<span>是否合身: 合身</span>
+						</div>
+						<div class="comment">
+							<img src="../imgs/goods_little.jpg">
+							<h1>q***p<p>2017-1-6</p></h1>
+							<p>卖家果然没让人失望，这个款型比较百搭，扎头发起来穿个小白鞋就活泼很多，头发披着又显得很女人，深色浅色的内搭都可以配，出来的风格都不一样，也不显得臃肿，风度温度都有啦，面料很软，也厚，超爱的。</p>
+							<span>是否合身: 合身</span>
+						</div>
+						<br><br><br>
+						<a href="#">1</a><br><br>
+						<hr style="border-top: 1px solid rgb(229,229,229); width: 729px; margin-left: -20px;">
+					</div>
+				</div>
+				<div id="moreInfo_middle_top3" hidden="hidden">
+					<h1>本店同类商品</h1>
+					<ul>
+						<li>
+							<img src="../imgs/goods_bottom1.jpg" alt="">
+							<a href="#">呢大衣女中长款韩版秋冬2017新款韩国过膝茧型格子呢子外套潮
+							</a>
+							<span>$449.00</span>
+							<p class="love"></p><p>234</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom2.jpg" alt="">
+							<a href="#">MOGU马卡龙紫九分袖毛呢外套</a>
+							<span>$388.00</span>
+							<p class="love"></p><p>243</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom3.jpg" alt="">
+							<a href="#">格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$599.00</span>
+							<p class="love"></p><p>546</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom1.jpg" alt="">
+							<a href="#">呢大衣女中长款韩版秋冬2017新款韩国过膝茧型格子呢子外套潮
+							</a>
+							<span>$449.00</span>
+							<p class="love"></p><p>1233</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom2.jpg" alt="">
+							<a href="#">MOGU马卡龙紫九分袖毛呢外套</a>
+							<span>$388.00</span>
+							<p class="love"></p><p>3244</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom3.jpg" alt="">
+							<a href="#">格子大衣女中长款韩版2017新款潮秋冬装原宿千鸟格双排扣毛呢外套</a>
+							<span>$599.00</span>
+							<p class="love"></p><p>546</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom1.jpg" alt="">
+							<a href="#">呢大衣女中长款韩版秋冬2017新款韩国过膝茧型格子呢子外套潮
+							</a>
+							<span>$449.00</span>
+							<p class="love"></p><p>234</p>
+						</li>
+						<li>
+							<img src="../imgs/goods_bottom2.jpg" alt="">
+							<a href="#">MOGU马卡龙紫九分袖毛呢外套</a>
+							<span>$388.00</span>
+							<p class="love"></p><p>243</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="moreInfo_right" >
+				<ul>
+					<li><a href="#desc" > <!-- class="b" -->
+							<p ></p> <!-- style="color: red;" class="goods_right_red" -->
+							尺码描述
+						</a></li>
+					<li><a href="#args">
+							<p class="goods_right"></p>
+							产品参数
+						</a></li>
+					<li><a href="#effect">
+							<p class="goods_right"></p>
+							穿着效果
+						</a></li>
+					<li><a href="#size">
+							<p class="goods_right"></p>
+							尺码说明
+						</a></li>
+					<li><a href="#comType">
+							<p class="goods_right"></p>
+							商品推荐
+						</a></li>
+				</ul>
+			</div>
+
+		</div>
+		
+
+
+		<div class="fix" id="fix" hidden="hidden">
+			<div><h3>MUGU小象<img src="../imgs/goods_icon6.gif" alt=""></h3></div>
+			<div>
+				<ul>
+					<li><a href="#moreInfo_middle_top">商品详情</a></li>
+					<li><a href="#moreInfo_middle_top2">累计评价</a></li>
+					<li><a href="#moreInfo_middle_top3">本店同类商品</a></li>
+					<li><button class="shoppingcart intoCart">&#xe623 加入购物车</button></li>
+				</ul>
+			</div>
+			<div>
+				<p>手机扫码下单</p><h1 class="twod"></h1><h2 class="goods_down"></h2>
+				<!-- <h6 display="none"><img src="../imgs/twod.png"></h6> -->
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="bottom">
+		<div class="content">
+			<h4>-新手帮助-</h4>
+			<span>
+			<a href="#">常见问题</a>
+			<a href="#">自助服务</a>
+			<a href="#">联系客服</a>
+			<a href="#">意见反馈</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-权益保障-</h4>
+			<span>
+			<a>全国包邮</a>
+			<a>七天无理由退货</a>
+			<a>退货运费补贴</a>
+			<a>限时发货</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-支付方式-</h4>
+			<span>
+			<a>微信支付</a>
+			<a>支付宝</a>
+			<a>白富美支付</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-移动客户端下载-</h4>
+			<span>
+			<!-- <a>蘑菇街</a><img src="../imgs/二维码.png"> -->
+			<a>美丽说</a>
+			<a>uni引力</a>
+			</span>
+		</div>
+		<hr style=" height:2px;border:none;border-top:2px solid rgb(255,87,119);width: 1210px; margin: 0px auto;">
+		<ul>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">招聘信息</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">商家入驻</a></li>
+			<li><a href="#">商家后台</a></li>
+			<li><a href="#">蘑菇商学院</a></li>
+			<li><a href="#">商家社区</a></li>
+			<li><a href="#">规则中心</a></li>
+			<li><a href="#">有害信息举报</a></li>
+			<span>@2017 Mogujie.com 杭州卷皮网络有限公司</span><br>
+			<span id="button_line2">营业执照:913301065526808764 | 网络文化经营许可证：浙江文（2016） 0349-219 | 增值电信业务经营许可证：浙B2-20110349 | 安全责任书 | 浙江网安倍 33010602002329</span>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li style="height: 80px;"></li>
+			<li>
+				<p class="bar_cart"></p>
+				<span>购物车</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="coupon"></p>
+				<span>优惠券</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="wallet"></p>
+				<span>钱包</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="footmark"></p>
+				<span>足迹</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li height="40px" hidden="hidden">
+				<p class="top" ></p>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

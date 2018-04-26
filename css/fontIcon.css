@@ -1,0 +1,23 @@
+@font-face{
+	font-family: fontIcon;
+	src:url("../font/fontIcon.woff") format("woff");
+
+}
+/*.star:before{
+	font-family: "fontIcon";
+	content: "\E610";
+	color: red;
+}*/
+ .star{
+	font-family: "fontIcon";
+	color: rgb(255,0,119);
+} 
+.staractive{
+	font-family: "fontIcon";
+}
+.shoppingcart{
+	font-family: 'fontIcon';
+}
+.fontIcon{
+	font-family: 'fontIcon';
+}

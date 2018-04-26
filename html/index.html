@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<!-- 千鸟格中长款毛呢大衣 -->
+	<link rel="stylesheet" type="text/css" href="../css/comm.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/myscroll.js"></script>
+	<script type="text/javascript" src="../js/comm.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.ser').click(function(event) {
+				window.location.href="search.html";
+			});
+			$('#mabyLike ul li').hover(function(){
+		        $(this).find('h6').show();
+		        $(this).css('cursor','pointer');
+		        $($(this).find('h6').click(function(){
+		            window.location.href="goods_details.html";
+		        }));
+			    },function(){
+			        $(this).find('h6').hide();
+		    });
+		});
+	</script>
+</head>
+<body>
+	<div id="top">
+		<p class="home"></p>
+		<a href="#" id="index">蘑菇街首页</a>
+		<ul>
+			<li>
+				<a href="#">
+				<span>登陆</span>
+				</a>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="order"></p>
+					<span>我的订单</span>
+				</a>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="cart"></p>
+					<span>购物车</span>
+				</a>
+				<div id="shoopMarsk" hidden="hidden" class="top_marsk" style="display: none;">
+			 		<h2>购物车里没有商品！</h2>
+				</div>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<span>客户服务</span>
+					<p class="down"></p>
+				</a>
+				<div id="serviceMarsk" class="top_marsk">
+				<ul>
+					<li>消费者服务</li>
+					<li>商家中心</li>
+					<li>规则中心</li>
+				</ul>
+				</div>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="shop"></p>
+					<span>我的小店</span>
+					<p class="down"></p>
+				</a>
+				<div id="myshopMarsk" class="top_marsk" style="display: none;">
+				<ul>
+					<li>管理后台</li>
+					<li>商家社区</li>
+					<li>商家培训</li>
+					<li>市场入驻</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="search">
+		<img id="logo" src="../imgs/logo.png">
+		<input type="" name="" padding-left="30px;" placeholder="秋裤"><button class="ser">搜 索</button>
+		<span>搜商品<p class="inp_down"></p>
+			<div class ="search_type" hidden="hidden">
+				<a href="#">搜商品</a>
+				<a href="#">搜店铺</a>
+			</div>
+		</span>
+		<ul>
+			<li>
+				<a href="#">袜子</a>
+				<a href="#" style="color: rgb(255,0,119);">卫衣</a>
+				<a href="#">手机壳</a>
+				<a href="#">内裤</a>
+				<a href="#">时尚套装</a>
+				<a href="#">口红</a>
+				<a href="#">牛仔裤</a>
+				<a href="#"style="color: rgb(255,0,119);">眉笔</a>
+				<a href="#">短袖T恤</a>
+				<a href="#">小白鞋</a>
+			</li>
+		</ul>
+		<img id="top_money" src="../imgs/index_top_money.png">
+		<div class="history" hidden="hidden">
+			<p>历史记录</p>
+		</div>
+	</div>
+
+	<div id="fixNav" hidden="hidden">
+		<img src="../imgs/little_log.png">
+		<em>全部商品分类</em>
+		<img id="trangle" src="../imgs/trangle.png">
+		<input id="fixNav_input" type="" name="" padding-left="30px;" placeholder="秋裤"><button class="ser">搜 索</button>
+		<span id="s" >搜商品<p id="fixNav_inp_down" class="inp_down"></p>
+			<div  id="fixNav_search_type" hidden="hidden" >
+				<a href="#">商品</a>
+				<a href="#">店铺</a>
+			</div>
+		</span>
+		<div class="history" id="history" hidden="hidden">
+			<p>历史记录</p>
+		</div>
+		<div hidden="hidden" >
+			
+		</div>
+	</div>
+	<h2>
+		<ul>
+			<li><a href="#"><span>主题市场</span></a></li>
+			<li class="top_li_line"></li>
+			<li><a href="#">省钱团购</a></li>
+			<li class="top_li_line"></li>
+			<li><a href="#">显示快抢</a></li>
+			<li class="top_li_line"></li>
+			<li><a href="#">品质优选</a></li>
+		</ul>
+	</h2>
+
+	<div class="banner">
+        <div class="move" id="move">
+            <ul>
+                <li><img src="../imgs/top_img1.png" alt=""></li>
+                <li><img src="../imgs/top_img2.png" alt=""></li>
+                <li><img src="../imgs/top_img1.png" alt=""></li>
+                <li><img src="../imgs/top_img2.png" alt=""></li>
+                <li><img src="../imgs/top_img2.png" alt=""></li>
+            </ul>
+        </div>
+         <div class="ctrl" id="ctrl"></div>
+    </div>
+	
+
+	<div class="nav" id="nav">
+    	<ul>
+    		<li>
+    			<a href="#">冬季热卖</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#" style="color: rgb(255,0,119);">测试数据</a>
+    			<a href="#">TEST</a>
+    			<div id="nav_type" style="display: none;">
+			    	<ul>
+			    		<li class="">
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#" >HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#" style="color: rgb(255,0,119);">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li class="">
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#" style="color: rgb(255,0,119);">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#" style="color: rgb(255,0,119);">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li class="">
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+   				<div id="nav_type_foryYou" style="display: none;">
+			    	<h3>为你推荐</h3>
+			    	<h4>根据你的购买记录专门为你推荐</h4>
+			    	<div class="forImg">
+				    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+				    	<p class="detail">冬季新款棉 (....</p>
+				    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+				    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+				    	<p class="detail">冬季新款棉 (....</p>
+				    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+				    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+				    	<p class="detail">冬季新款棉 (....</p>
+				    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+				    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+				    	<p class="detail">冬季新款棉 (....</p>
+			    		<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+				    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+				    	<p class="detail">冬季新款棉 (....</p>
+				    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+				    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+				    	<p class="detail">冬季新款棉 (....</p>
+			    		<span>￥288.00</span><br>
+			    	</div>
+    			</div> 
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">裙子</a>
+    			<a href="#">TEST</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#" style="color: rgb(255,0,119);">测试数据</a>
+    			<div id="nav_type" class="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#" style="color: rgb(255,0,119);">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">裤子</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">TEST</a>
+    			<a href="#">测试数据</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">测试</a>
+    			<a href="#">测试数据</a>
+    			<a href="#" style="color: rgb(255,0,119);">女鞋</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">美妆</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">测试数据</a>
+    			<a href="#">TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">男友</a>
+    			<a href="#">测试</a>
+    			<a href="#">测试数据</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">家居</a>
+    			<a href="#">测试</a>
+    			<a href="#" style="color: rgb(255,0,119);">测试数据</a>
+    			<a href="#" >TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#" >内衣</a>
+    			<a href="#" style="color: rgb(255,0,119);">测试数据</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#" >测试</a>
+    			<a href="#">TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">母婴</a>
+    			<a href="#">测试数据</a>
+    			<a href="#">TEST</a>
+    			<a href="#">测试</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">包包</a>
+    			<a href="#">测试数据</a>
+    			<a href="#">TEST</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li class="nav_line"></li>
+    		<li>
+    			<a href="#">配饰</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">TEST</a>
+    			<a href="#">测试数据</a>
+				<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li><li class="nav_line"></li>
+    		<li>
+    			<a href="#">运动</a>
+    			<a href="#">测试数据</a>
+    			<a href="#">测试</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li>
+    			<a href="#">食品</a>
+    			<a href="#">测试</a>
+    			<a href="#">TEST</a>
+    			<a href="#">测试数据</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+    		</li>
+    		<li>
+    			<a href="#">电器</a>
+    			<a href="#">测试数据</a><img class="hot" src="../imgs/index_nav_little.png">
+    			<a href="#">测试</a>
+    			<a href="#">TEST</a>
+    			<div id="nav_type" hidden="hidden">
+			    	<ul>
+			    		<li>
+			    			<a href="#">冬季热卖</a><br>
+			    			<a href="#" class="light">当季新品</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">流行精选</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">HEY</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">TEEST</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">热卖</a><br>
+			    			<a href="#">HELLO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">测试</a>
+			    			<a href="#">SO</a>
+			    			<a href="#">测试数据</a>
+			    			<a href="#">MAN</a>
+			    			<a href="#">TEEST</a>
+			    			<a href="#">数据</a>
+			    		</li>
+			    		<li class="line"><hr></li>
+			    		<li>
+			    			<a href="#" class="light">品牌推荐</a><br>
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img1.png">
+			    			<img src="../imgs/nav_little_img2.png">
+			    		</li>
+			    	</ul>
+   				</div>
+   				<div id="nav_type_foryYou" hidden="hidden">
+			    	<h3>为你推荐</h3>
+			    	<h4>根据你的购买记录专门为你推荐</h4>
+			    	<div class="forImg">
+			    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+			    	<p class="detail">冬季新款棉 (....</p>
+			    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+			    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+			    	<p class="detail">冬季新款棉 (....</p>
+			    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+			    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+			    	<p class="detail">冬季新款棉 (....</p>
+			    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+			    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+			    	<p class="detail">冬季新款棉 (....</p>
+			    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+			    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+			    	<p class="detail">冬季新款棉 (....</p>
+			    	<span>￥288.00</span><br>
+			    	</div>
+			    	<div class="forImg">
+			    	<img src="../imgs/nav_type_forYour1.png" width="95px" height="95px"><br>
+			    	<p class="detail">冬季新款棉 (....</p>
+			    	<span>￥288.00</span><br>
+			    	</div>
+   				</div>
+    		</li>
+    	</ul>
+    </div>
+    <div id="top_img2_right">
+		<div class="top_img2">
+			<div class="changeBgColor">
+				<img src="../imgs/top_little2.png">
+				<p>菇凉好！</p>
+				<h2>欢迎来到蘑菇街</h2>
+				<button>会员中心</button>
+			</div>
+		</div>
+		<div class="top_img2" id="normal">
+				<h2>0.01抽好运</h2>
+				<p>每天一分钱</p>
+				<img src="../imgs/top_little1.png">
+		</div>
+	</div>
+	<div id="box">
+		<!-- <br> -->
+		<div class="block">
+			<div class="block1">
+				<span>为您推荐</span>
+				<p>特价抢新</p>
+				<img src="../imgs/grab_img1.png">
+			</div>
+			<div class="half">
+				<span>急速告罄</span>
+				<p>低价疯抢仅剩一件</p>
+				<img src="../imgs/grab_little1.png">
+			</div>
+			<div class="half">
+				<span>一元快抢</span>
+				<p>百余好货一元抢</p>
+				<img src="../imgs/grab_little2.png">
+			</div>
+		</div>
+		<div class="block">
+			<div class="block1">
+				<span>团购好货</span>
+				<p>参与团购,每天上新</p>
+				<img src="../imgs/grab_img2.png">
+			</div>
+			<div class="half">
+				<span>品牌特卖</span>
+				<p>品牌好货,每日10点</p>
+				<img src="../imgs/grab_little2.png">
+			</div>
+			<div class="half">
+				<span>U质团&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<p>优质团价19元起</p>
+				<img src="../imgs/grab_little1.png">
+			</div>
+		</div>
+		<div class="block_right">
+			<span>甄选爆款</span>
+			<p>尖货TOP9.9元起</p>
+			<img src="../imgs/grab_img2.png">
+		</div>
+	
+		<!-- 红人穿搭 -->
+		<h1>
+			<span>l</span>
+			红人穿搭
+			<p><a href="#">查看全部&gt;&gt;&gt;</a></p>
+		</h1>
+		<div id="hot">
+			<ul>
+				<li>
+					<div class="item">
+						<div class="correct">
+							<a href="#">
+							<img src="../imgs/hot1.PNG" alt=""><p class="little_title">休闲运动控</p>
+							</a>
+						</div>
+						<div class="opposite">
+						<a href="#">
+						<img src="../imgs/hot2.PNG" alt=""><p class="little_title">小个子穿搭</p>
+						</a>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="correct">
+							<a href="#">
+							<img src="../imgs/hot3.PNG" alt=""><p class="little_title">小个子穿搭</p>
+							</a>
+						</div>
+						<div class="opposite">
+							<a href="#">
+							<img src="../imgs/hot1.PNG" alt=""><p class="little_title">休闲运动控</p>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="correct">
+							<a href="#">
+							<img src="../imgs/hot3.PNG" alt=""><p class="little_title">休闲运动控</p>
+							</a>
+						</div>
+						<div class="opposite">
+						<a href="#">
+						<img src="../imgs/hot2.PNG" alt=""><p class="little_title">小个子穿搭</p>
+						</a>
+					</div>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="correct">
+							<a href="#">
+							<img src="../imgs/hot2.PNG" alt=""><p class="little_title">小个子穿搭</p>
+							</a>
+						</div>
+						<div class="opposite">
+							<a href="#">
+							<img src="../imgs/hot3.PNG" alt=""><p class="little_title">休闲运动控</p>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<div class="correct">
+							<a href="#">
+							<img src="../imgs/hot1.PNG" alt=""><p class="little_title">休闲运动控</p>
+							</a>
+						</div>
+						<div class="opposite">
+						<a href="#">
+						<img src="../imgs/hot2.PNG" alt=""><p class="little_title">小个子穿搭</p>
+						</a>
+					</div>
+					</div>
+				</li>
+			</ul>
+			<div id="little_imgs">
+				<ul>
+					<li><a href="#"><img src="../imgs/hot_little1.PNG" alt=""><span>气质女神</span></a></li>
+					<li><a href="#"><img src="../imgs/hot_little2.PNG" alt=""><span>懒人日常穿搭</span></a></li>
+					<li><a href="#"><img src="../imgs/hot_little2.PNG" alt=""><span>气质女神</span></a></li>
+					<li><a href="#"><img src="../imgs/hot_little1.PNG" alt=""><span>软妹棉服</span></a></li>
+					<li><a href="#"><img src="../imgs/hot_little2.PNG" alt=""><span>懒人日常穿搭</span></a></li>
+					<li><a href="#"><img src="../imgs/hot_little1.PNG" alt=""><span>软妹棉服</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 快抢法新日 -->
+		<h1>
+			<span>l</span>
+			快抢发新日
+			<p><a href="#">查看全部&gt;&gt;&gt;</a></p>
+		</h1>
+		<div id="grab">
+			<div id="grab_left">
+				
+			</div>
+			<div id="grab_right" class="group_banner">
+				<div class="group_move" id="group_move">
+					<ul>
+						<li>
+							<div class="group_forImg">
+								<a href="goods_details.html">
+								<img src="../imgs/goods_big.PNG" alt="">
+								<div>
+									<p class="goods_title">千鸟格中长款毛呢大衣</p>
+									<em>$255.00</em>
+									<del>$388.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab2.PNG" alt="">
+								<div>
+									<p class="goods_title">粉嫩少女休闲套装OL办公室</p>
+									<em>$365.00</em>
+									<del>$398.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab3.PNG" alt="">
+								<div>
+									<p class="goods_title">休闲加厚卫衣韩版BF风</p>
+									<em>$385.00</em>
+									<del>$498.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="goods_details.html">
+								<img src="../imgs/goods_big.PNG" alt="">
+								<div>
+									<p class="goods_title">千鸟格中长款毛呢大衣</p>
+									<em>$255.00</em>
+									<del>$388.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab4.PNG" alt="">
+								<div>
+									<p class="goods_title">超酷时尚卷边休闲牛仔裤</p>
+									<em>$233.00</em>
+									<del>$298.00</del>
+								</div>
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab2.PNG" alt="">
+								<div>
+									<p class="goods_title">粉嫩少女休闲套装OL办公室</p>
+									<em>$365.00</em>
+									<del>$398.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab1.PNG" alt="">
+								<div>
+									<p class="goods_title">加厚卷边高腰牛仔裤女</p>
+									<em>$255.00</em>
+									<del>$388.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="goods_details.html">
+								<img src="../imgs/goods_big.PNG" alt="">
+								<div>
+									<p class="goods_title">千鸟格中长款毛呢大衣</p>
+									<em>$255.00</em>
+									<del>$388.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab4.PNG" alt="">
+								<div>
+									<p class="goods_title">超酷时尚卷边休闲牛仔裤</p>
+									<em>$233.00</em>
+									<del>$298.00</del>
+								</div>
+								</a>
+							</div>
+							<div class="group_forImg">
+								<a href="#">
+								<img src="../imgs/grab3.PNG" alt="">
+								<div>
+									<p class="goods_title">休闲加厚卫衣韩版BF风</p>
+									<em>$385.00</em>
+									<del>$498.00</del>
+								</div>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="group_ctrl" id="group_ctrl"></div>
+			</div>
+		</div>
+		<!-- 品牌特卖 -->
+		<h1>
+			<span>l</span>
+			品牌特卖
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="#">甄选爆款 低价质优</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">冬日女装,39元起！</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">大牌美妆,19元就购了！</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">紧致包配,2折起售~</a></li>
+			</ul>
+			<p><a href="#">查看全部&gt;&gt;&gt;</a></p>
+		</h1>
+		<div class="main" id="specail"  >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>甄选爆款</button>
+					<button>今日王牌</button>
+					<button>下期预告</button>
+					<button>新品单鞋</button>
+					<button>小白鞋</button>
+					<button>雪纺衫</button>
+				</div>
+				<h2>品牌精选</h2>
+				<h6>大牌一折起售！！！</h6>
+				<img src="../imgs/specail.PNG
+				" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">秋冬女鞋</em>
+						<p class="middle_detail">39元起~</p>
+						<img src="../imgs/specail3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">甄选大牌</em>
+						<p class="middle_detail">1折开抢</p>
+						<img src="../imgs/specail.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">品质好店</em>
+						<p class="middle_detail">每日推荐~</p>
+						<img src="../imgs/specail4.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">暖冬新衣</em>
+						<p class="middle_detail">领卷立减20元！</p>
+						<img src="../imgs/specail4.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">大牌美妆</em>
+						<p class="middle_detail">口红买2送1</p>
+						<img src="../imgs/specail2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">精品包配！</em>
+						<p class="middle_detail">全场11元起！</p>
+						<img src="../imgs/specail.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right">
+				<ul>
+					<li><img src="../imgs/specail_type1.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type4.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type2.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type3.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type4.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type3.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type1.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type2.PNG" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 每日精选 -->
+		<h1 id="four">
+			<span>l</span>
+			每日精选
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="#">柔软针织</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">时尚耳饰</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">内衣套装</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">包包精选</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">收纳盒</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">女士手表</a></li>
+			</ul>
+			<p><a href="#">查看全部&gt;&gt;&gt;</a></p>
+		</h1>
+		<div id="daily_select" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>衬衫</button>
+					<button>牛仔裤</button>
+					<button>长袖T恤</button>
+					<button>风衣</button>
+					<button>秋冬美装</button>
+					<button>小白鞋</button>
+				</div>
+				<h2>精选美妆</h2>
+				<h6>最热门美妆单品戳</h6>
+				<img src="../imgs/daily_select_big2.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">冬季套装</em>
+						<p class="middle_detail">超美搭配 立减50元</p>
+						<img src="../imgs/daily_select_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">精选包配</em>
+						<p class="middle_detail">领卷立减20元！</p>
+						<img src="../imgs/daily_select_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">美冬上装</em>
+						<p class="middle_detail">毛衣，呢大衣大减价！</p>
+						<img src="../imgs/daily_select_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">精选包配</em>
+						<p class="middle_detail">19.8明星同款</p>
+						<img src="../imgs/daily_select_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">美冬上装</em>
+						<p class="middle_detail">口红买2送1</p>
+						<img src="../imgs/daily_select_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">冬季套装</em>
+						<p class="middle_detail">超美搭配 立减50元</p>
+						<img src="../imgs/daily_select_little3.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right">
+				<img src="../imgs/daily_select_big.PNG" height="352px">
+			</div>
+		</div>
+		<!-- 女装 -->
+		<h1>
+			<span>l</span>
+			品牌特卖
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="#">甄选爆款 低价质优</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">冬日女装,39元起！</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">大牌美妆,19元就购了！</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">紧致包配,2折起售~</a></li>
+			</ul>
+			<p><a href="#">查看全部&gt;&gt;&gt;</a></p>
+		</h1>
+		<div id="gril" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>甄选爆款</button>
+					<button>今日王牌</button>
+					<button>下期预告</button>
+					<button>新品单鞋</button>
+					<button>小白鞋</button>
+					<button>雪纺衫</button>
+				</div>
+				<h2>潮流女装</h2>
+				<h6>冬季新品 不止一折</h6>
+				<img src="../imgs/girl_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">御寒棉服</em>
+						<p class="middle_detail">39元起~</p>
+						<img src="../imgs/girl_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">特卖毛衣</em>
+						<p class="middle_detail">1折开抢</p>
+						<img src="../imgs/girl_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">显瘦牛仔裤</em>
+						<p class="middle_detail">每日推荐~</p>
+						<img src="../imgs/girl_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">显瘦牛仔裤</em>
+						<p class="middle_detail">领卷立减20元！</p>
+						<img src="../imgs/girl_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">御寒棉服</em>
+						<p class="middle_detail">口红买2送1</p>
+						<img src="../imgs/girl_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">特卖毛衣</em>
+						<p class="middle_detail">全场11元起！</p>
+						<img src="../imgs/girl_little1.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right">
+				<ul>
+					<li><img src="../imgs/girl_type_little1.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type4.PNG" alt=""></li>
+					<li><img src="../imgs/girl_type_little2.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type2.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type3.PNG" alt=""></li>
+					<li><img src="../imgs/girl_type_little1.PNG" alt=""></li>
+					<li><img src="../imgs/specail_type1.PNG" alt=""></li>
+					<li><img src="../imgs/girl_type_little2.PNG" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 女鞋 -->
+		<h1>
+			<span>l</span>
+			女鞋
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="#">甄选爆款 低价质优</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">冬日女装,39元起！</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">大牌美妆,19元就购了！</a></li>
+				<li class="specail_line"><hr></li>
+				<li><a href="#">紧致包配,2折起售~</a></li>
+			</ul>
+			<p><a href="#">查看全部&gt;&gt;&gt;</a></p>
+		</h1>
+		<div id="shoes" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>短靴</button>
+					<button>毛毛鞋</button>
+					<button>厚底鞋</button>
+					<button>长靴</button>
+					<button>切尔西靴</button>
+					<button>棉鞋</button>
+				</div>
+				<h2>吸睛美鞋</h2>
+				<h6>冬季人气热卖榜 1折疯抢</h6>
+				<img src="../imgs/shoes_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">星款小白鞋</em>
+						<p class="middle_detail">风靡全球 万能百搭款</p>
+						<img src="../imgs/shoes_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">白搭时尚</em>
+						<p class="middle_detail">把简约穿成时尚</p>
+						<img src="../imgs/shoes_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">时尚雪地鞋</em>
+						<p class="middle_detail">冬季必备小地暖</p>
+						<img src="../imgs/shoes_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">白搭时尚</em>
+						<p class="middle_detail">把简约穿成时尚</p>
+						<img src="../imgs/shoes_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">时尚雪地鞋</em>
+						<p class="middle_detail">冬季必备小地暖</p>
+						<img src="../imgs/shoes_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">星款小白鞋</em>
+						<p class="middle_detail">风靡全球 万能百搭款</p>
+						<img src="../imgs/shoes_little2.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_four">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/shoes_little12.PNG" alt="">
+						<a>休闲运动跑步鞋韩版百搭红色吸眼睛</a>
+						<span>$59.00</span>
+					</li>
+					<li><img src="../imgs/shoes_little11.PNG" alt="">
+						<a>INS同款GD秋冬ulzzang运动情侣女原宿风</a>
+						<span>$88.00</span>
+					</li>
+					<li><img src="../imgs/shoes_little12.PNG" alt="">
+						<a>休闲运动跑步鞋韩版百搭红色吸眼睛</a>
+						<span>$59.00</span>
+					</li>
+					<li><img src="../imgs/shoes_little11.PNG" alt="">
+						<a>INS同款GD秋冬ulzzang运动情侣女原宿风</a>
+						<span>$88.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 美妆 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>美妆</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">补水面膜</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">保湿套装</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">遮瑕BB</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">洗面卸妆</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">斩男口红</a></li>
+			</ul>
+		</div>
+		<div id="beauty" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>面膜</button>
+					<button>套装</button>
+					<button>底妆</button>
+					<button>口红</button>
+					<button>洁面</button>
+					<button>身体护理</button>
+				</div>
+				<h2>护肤彩妆</h2>
+				<h6>冬季人气热卖榜 1折疯抢</h6>
+				<img src="../imgs/beauty_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">美妆大赏</em>
+						<p class="middle_detail">爆款抢的早 不怕售罄了</p>
+						<img src="../imgs/beauty_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">必备面膜</em>
+						<p class="middle_detail">面膜敷地勤 小脸变水灵</p>
+						<img src="../imgs/beauty_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">超值套装</em>
+						<p class="middle_detail">套装选的牛 省钱你最六</p>
+						<img src="../imgs/beauty_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">必备面膜</em>
+						<p class="middle_detail">面膜敷地勤 小脸变水灵</p>
+						<img src="../imgs/beauty_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">超值套装</em>
+						<p class="middle_detail">套装选的牛 省钱你最六</p>
+						<img src="../imgs/beauty_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">美妆大赏</em>
+						<p class="middle_detail">爆款抢的早 不怕售罄了</p>
+						<img src="../imgs/beauty_little1.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_two">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/beauty_big2.PNG" style="width: 200px;height: 200px;" alt="">
+						<a>ponyEffect光彩气垫BB霜粉底遮瑕保湿【含替换装】</a>
+						<span>$259.00</span>
+						<del>$389.00</del>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 男友 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>男友</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">上衣</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">裤型</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">潮鞋</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">贴身私物</a></li>
+			</ul>
+		</div>
+		<div id="boy" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>面膜</button>
+					<button>套装</button>
+					<button>底妆</button>
+					<button>口红</button>
+					<button>洁面</button>
+					<button>身体护理</button>
+				</div>
+				<h2>绝配男友</h2>
+				<h6>三折起 全宇宙时髦单品</h6>
+				<img src="../imgs/boy_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">火了10年的夹克</em>
+						<p class="middle_detail">人气热销 IN季必备3折起</p>
+						<img src="../imgs/boy_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">加厚休闲裤</em>
+						<p class="middle_detail">你比欧巴还要帅10分</p>
+						<img src="../imgs/boy_little4.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">毛衣开衫</em>
+						<p class="middle_detail">5折 白菜价也能chic到家</p>
+						<img src="../imgs/boy_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">49元男鞋</em>
+						<p class="middle_detail">买了1万双都不够0%买错率</p>
+						<img src="../imgs/boy_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">火了10年的夹克</em>
+						<p class="middle_detail">人气热销 IN季必备3折起</p>
+						<img src="../imgs/boy_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">加厚休闲裤</em>
+						<p class="middle_detail">你比欧巴还要帅10分</p>
+						<img src="../imgs/boy_little4.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_two">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/boy_big2.PNG" style="width: 200px;height: 200px;" alt="">
+						<a>帅气短款潮流冬装外套秋装新款学生韩版百搭羽绒男冬季连帽加厚暴乱</a>
+						<span>$259.00</span>
+						<del>$689.00</del>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 家居 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>家居&食品</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">家纺好货</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">制品洗液</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">家居百货</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">手机数码</a></li>
+			</ul>
+		</div>
+		<div id="home" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>手机周边</button>
+					<button>毛巾浴巾</button>
+					<button>四件套</button>
+					<button>零食</button>
+					<button>茶酒冲饮</button>
+					<button>生鲜水果</button>
+				</div>
+				<h2>换季上新</h2>
+				<h6>只卖性价比最高的</h6>
+				<img src="../imgs/home_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">秋冬床品</em>
+						<p class="middle_detail">床品特卖全场3折起</p>
+						<img src="../imgs/home_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">收纳宝盒</em>
+						<p class="middle_detail">收纳神器必备 全场满减</p>
+						<img src="../imgs/home_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">手机配件</em>
+						<p class="middle_detail">吸睛手机壳全场9折起</p>
+						<img src="../imgs/home_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">情趣生活</em>
+						<p class="middle_detail">一起来干羞羞的事吧</p>
+						<img src="../imgs/home_little4.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">零食大礼包</em>
+						<p class="middle_detail">爱她 就送零食大礼包</p>
+						<img src="../imgs/home_little5.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">早秋茶饮</em>
+						<p class="middle_detail">由内而外美美哒</p>
+						<img src="../imgs/home_little6.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_two">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/home_big2.PNG" style="width: 200px;height: 200px;" alt="">
+						<a>创意时尚水晶羽毛创意台灯卧室床头灯生日婚庆装饰简约小夜灯</a>
+						<span>￥39.00</span>
+						<del>￥59.9.00</del>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 内衣 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>内衣</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">文胸</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">无钢圈内衣</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">隐形内衣</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">隐形文胸</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">卡通内裤</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">安全裤</a></li>
+				<li><a href="">塑身衣</a></li>
+				<li><a href="">抹胸</a></li>
+			</ul>
+		</div>
+		<div id="underwear" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>无痕内衣</button>
+					<button>调整内衣</button>
+					<button>性感睡衣</button>
+					<button>情侣睡衣</button>
+					<button>船袜</button>
+					<button>堆堆袜</button>
+				</div>
+				<h2>性感内衣</h2>
+				<h6>暖冬上新1000+</h6>
+				<img src="../imgs/underwear_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">聚拢文胸</em>
+						<p class="middle_detail">这些罩罩让你罩杯up!</p>
+						<img src="../imgs/underwear_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">睡衣也要美上天</em>
+						<p class="middle_detail">品质睡衣伴入眠</p>
+						<img src="../imgs/underwear_little2.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">百搭神器美袜</em>
+						<p class="middle_detail">不露一撮袜子怎么时髦</p>
+						<img src="../imgs/underwear_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">百搭神器美袜</em>
+						<p class="middle_detail">不露一撮袜子怎么时髦</p>
+						<img src="../imgs/underwear_little3.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">聚拢文胸</em>
+						<p class="middle_detail">这些罩罩让你罩杯up!</p>
+						<img src="../imgs/underwear_little1.PNG" alt="">
+					</li>
+					<li>
+						<em class="middle_title">睡衣也要美上天</em>
+						<p class="middle_detail">品质睡衣伴入眠</p>
+						<img src="../imgs/underwear_little2.PNG" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_four">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/underwear_little11.PNG" alt="">
+						<a>睡衣女秋长袖纯棉纯色甜美可爱花边公主宫廷风</a>
+						<span>$59.00</span>
+					</li>
+					<li><img src="../imgs/underwear_little12.PNG" alt="">
+						<a>港味复古夏新款防走光弹力打底衫纯色修生</a>
+						<span>$38.00</span>
+					</li>
+					<li><img src="../imgs/underwear_little11.PNG" alt="">
+						<a>睡衣女秋长袖纯棉纯色甜美可爱花边公主宫廷风</a>
+						<span>$59.00</span>
+					</li>
+					<li><img src="../imgs/underwear_little12.PNG" alt="">
+						<a>港味复古夏新款防走光弹力打底衫纯色修生</a>
+						<span>$38.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 蘑菇优选 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>蘑菇优选</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">袜子</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">水果</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">家纺</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">美妆</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">穿搭</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">杂货</a></li>
+			</ul>
+		</div>
+		<div id="selective" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>生鲜水果</button>
+					<button>四件套</button>
+					<button>精选睡衣</button>
+					<button>美妆个护</button>
+					<button>内衣套装</button>
+					<button>零食礼包</button>
+				</div>
+				<h2>蘑菇优选</h2>
+				<h6>双旦好礼礼巨惠</h6>
+				<img src="../imgs/selective_big1.PNG" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<a href="#">
+						<em class="middle_title">品质睡衣</em>
+						<p class="middle_detail">睡衣也要穿成小仙女</p>
+						<img src="../imgs/selective_little1.PNG" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">暖冬萌妹</em> 
+						<p class="middle_detail">妹子精的挚爱之选</p>
+						<img src="../imgs/selective_little2.PNG" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">99元5件抢购</em>
+						<p class="middle_detail">最高直降100元</p>
+						<img src="../imgs/selective_little3.PNG" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">暖冬萌妹</em> 
+						<p class="middle_detail">妹子精的挚爱之选</p>
+						<img src="../imgs/selective_little2.PNG" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">99元5件抢购</em>
+						<p class="middle_detail">最高直降100元</p>
+						<img src="../imgs/selective_little3.PNG" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">品质睡衣</em>
+						<p class="middle_detail">睡衣也要穿成小仙女</p>
+						<img src="../imgs/selective_little1.PNG" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_two">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/selective_big2.PNG" style="width: 200px;height: 200px;" alt="">
+						<a>蘑菇优选 日本进口狮王150g*2支牙膏清新美白薄荷香型</a>
+						<span>￥39.00</span>
+						<del>￥59.9.00</del>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 母婴 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>母婴</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">童婴套装</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">妈咪套装</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">萌宝童鞋</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">玩具用品</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">孕妇洗护</a></li>
+			</ul>
+		</div>
+		<div id="baby" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>宝宝棉服</button>
+					<button>运动鞋</button>
+					<button>热卖套装</button>
+					<button>孕妇装</button>
+					<button>萌宝裤子</button>
+					<button>毛绒玩具</button>
+				</div>
+				<h2>初冬换新</h2>
+				<h6>本周TOP热销外套榜单</h6>
+				<img src="../imgs/baby_big.webp" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<a href="#">
+						<em class="middle_title">童装外套&棉服</em>
+						<p class="middle_detail">乱心公主养成记</p>
+						<img src="../imgs/baby_little1.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">毛绒玩具</em> 
+						<p class="middle_detail">毛绒猪猪佩奇抱回家~</p>
+						<img src="../imgs/baby_little2.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">洗护喂养</em>
+						<p class="middle_detail">秋冬洗护用品清单</p>
+						<img src="../imgs/baby_little3.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">洗护喂养</em>
+						<p class="middle_detail">秋冬洗护用品清单</p>
+						<img src="../imgs/baby_little3.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">童装外套&棉服</em>
+						<p class="middle_detail">乱心公主养成记</p>
+						<img src="../imgs/baby_little1.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">毛绒玩具</em> 
+						<p class="middle_detail">毛绒猪猪佩奇抱回家~</p>
+						<img src="../imgs/baby_little2.webp" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_two">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/baby_big2.webp" style="width: 200px;height: 200px;" alt="">
+						<a>文艺小清新秋季孕妇装宽松大码显瘦连衣裙长袖圆点上衣中长款裙子</a>
+						<span>￥79.00</span>
+						<del>￥109.9.00</del>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 包包 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>包包</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">学院双肩</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">短款钱包</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">刺绣徽章</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">男士手拿包</a></li>
+			</ul>
+		</div>
+		<div id="bag" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>宽肩带</button>
+					<button>马鞍包</button>
+					<button>怪萌宝</button>
+					<button>锁扣包</button>
+					<button>珀金包</button>
+					<button>旅行箱包</button>
+				</div>
+				<h2>点睛美包</h2>
+				<h6>新品三折起</h6>
+				<img src="../imgs/bag_big1.webp" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<a href="#">
+						<em class="middle_title">斜挎包</em>
+						<p class="middle_detail">17款新款热销中</p>
+						<img src="../imgs/bag_little1.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">双肩背包</em> 
+						<p class="middle_detail">出游必备 百搭双肩包</p>
+						<img src="../imgs/bag_little2.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">钱包</em>
+						<p class="middle_detail">买对钱包 财源广进</p>
+						<img src="../imgs/bag_little3.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">洗护喂养</em>
+						<p class="middle_detail">秋冬洗护用品清单</p>
+						<img src="../imgs/bag_little3.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">童装外套&棉服</em>
+						<p class="middle_detail">乱心公主养成记</p>
+						<img src="../imgs/bag_little1.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">毛绒玩具</em> 
+						<p class="middle_detail">毛绒猪猪佩奇抱回家~</p>
+						<img src="../imgs/bag_little2.webp" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_two">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/bag_big2.webp" style="width: 200px;height: 200px;" alt="">
+						<a>包包新款秋冬简约字母磨砂链条小方包格绣线复古学生单间斜挎包</a>
+						<span>￥79.00</span>
+						<del>￥109.9.00</del>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 配饰 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>配饰</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">韩版帽子</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">耳钉</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">长款耳钉</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">简约手表</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">眼镜框</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">银饰</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">黄金珠宝</a></li>
+			</ul>
+		</div>
+		<div id="ornament" class="main" >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>棒球帽</button>
+					<button>围巾</button>
+					<button>假发</button>
+					<button>项链</button>
+					<button>框架眼镜</button>
+					<button>珍珠</button>
+				</div>
+				<h2>气质礼帽</h2>
+				<h6>秋日搭配的一点小心机</h6>
+				<img src="../imgs/ornament_big1.webp" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<a href="#">
+						<em class="middle_title">元气潮帽</em>
+						<p class="middle_detail">潮人必备的明星同款</p>
+						<img src="../imgs/ornament_little2.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">简约围巾</em> 
+						<p class="middle_detail">性价比超高的凹造型利器</p>
+						<img src="../imgs/ornament_little1.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">框架眼镜</em>
+						<p class="middle_detail">看见不一样的自己</p>
+						<img src="../imgs/ornament_little3.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">洗护喂养</em>
+						<p class="middle_detail">秋冬洗护用品清单</p>
+						<img src="../imgs/ornament_little3.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">童装外套&棉服</em>
+						<p class="middle_detail">乱心公主养成记</p>
+						<img src="../imgs/ornament_little2.webp" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<em class="middle_title">毛绒玩具</em> 
+						<p class="middle_detail">毛绒猪猪佩奇抱回家~</p>
+						<img src="../imgs/ornament_little1.webp" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main_right splite_four">
+				<ul>
+					<li>
+						<p>大家都在买</p>
+						<img src="../imgs/transform.png" style="width: 13px;height: 13px;">
+						<a href="#">换一批</a>
+					</li>
+					<li><img src="../imgs/ornament_little11.webp" alt="">
+						<a>原宿风软妹可爱兔耳朵毛绒棒球帽韩版秋冬</a>
+						<span>$59.00</span>
+					</li>
+					<li><img src="../imgs/ornament_little12.webp" alt="">
+						<a>冬季保暖韩版连指学生潮版手套女加厚</a>
+						<span>$38.00</span>
+					</li>
+					<li><img src="../imgs/ornament_little11.webp" alt="">
+						<a>原宿风软妹可爱兔耳朵毛绒棒球帽韩版秋冬</a>
+						<span>$59.00</span>
+					</li>
+					<li><img src="../imgs/ornament_little12.webp" alt="">
+						<a>冬季保暖韩版连指学生潮版手套女加厚</a>
+						<span>$38.00</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 运动 -->
+		<div class="main_nav">
+			<span>1</span>
+			<p>运动</p>
+			<a href="#">查看更多>>></a>
+			<ul>
+				<li>热门搜索：</li>
+				<li><a href="">潮卫衣</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">外套</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">减脂神器</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">人气潮鞋</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">瑜伽服</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">时髦套装</a></li>
+				<li class="main_nav_line">|</li>
+				<li><a href="">小白鞋</a></li>
+			</ul>
+		</div>
+		<div class="main" id="sport"  >
+			<div class="main_left">
+				<div  class="boxForButtons">
+					<button>运动套装</button>
+					<button>运动鞋</button>
+					<button>时尚卫衣</button>
+					<button>瑜伽必备</button>
+					<button>泳装</button>
+					<button>小型器材</button>
+				</div>
+				<h2>品牌精选</h2>
+				<h6>运动大牌不止5折</h6>
+				<img src="../imgs/sport_big1.webp" width="150" height="160">
+			</div>
+			<div class="main_middle">
+				<ul>
+					<li>
+						<em class="middle_title">休闲鞋</em>
+						<p class="middle_detail">休闲鞋潮流季</p>
+						<img src="../imgs/sport_little1.webp" alt="">
+					</li>
+					<li>
+						<em class="middle_title">卫衣</em>
+						<p class="middle_detail">早秋百搭卫衣</p>
+						<img src="../imgs/sport_little3.webp" alt="">
+					</li>
+					<li>
+						<em class="middle_title">瘦身神器</em>
+						<p class="middle_detail">健身潮流套装</p>
+						<img src="../imgs/sport_little2.webp" alt="">
+					</li>
+					<li>
+						<em class="middle_title">瘦身神器</em>
+						<p class="middle_detail">健身潮流套装</p>
+						<img src="../imgs/sport_little3.webp" alt="">
+					</li>
+					<li>
+						<em class="middle_title">休闲鞋</em>
+						<p class="middle_detail">休闲鞋潮流季</p>
+						<img src="../imgs/sport_little1.webp" alt="">
+					</li>
+					<li>
+						<em class="middle_title">卫衣</em>
+						<p class="middle_detail">早秋百搭卫衣</p>
+						<img src="../imgs/sport_little2.webp" alt="">
+					</li>
+				</ul>
+			</div>
+			<div class="main_right">
+				<ul>
+					<li><img src="../imgs/sport_type1.webp" alt=""></li>
+					<li><img src="../imgs/sport_type2.webp" alt=""></li>
+					<li><img src="../imgs/sport_type3.webp" alt=""></li>
+					<li><img src="../imgs/sport_type1.webp" alt=""></li>
+					<li><img src="../imgs/sport_type2.webp" alt=""></li>
+					<li><img src="../imgs/sport_type3.webp" alt=""></li>
+					<li><img src="../imgs/sport_type3.webp" alt=""></li>
+					<li><img src="../imgs/sport_type1.webp" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 精选特卖 -->
+		<div  id="choiceness_nav">
+			<span>1</span>
+			<p>精选专题</p>
+		</div>
+		<div id="choiceness_banner" class="choiceness_banner">
+			<div  id="choiceness_move">
+				<ul>
+					<li>
+						<div>
+							<!-- <h3><img src="../imgs/choiceness_small1.webp">艾拉小姐ELA</h3> -->
+							<img src="../imgs/choiceness_big1.webp" style="width: 300px;height: 156px;" >
+							<div>
+								<img src="../imgs/choiceness_little1.webp" style="width: 60px;height: 60px">
+								<img src="../imgs/choiceness_little2.webp" style="width: 60px;height: 60px">
+								<img src="../imgs/choiceness_little3.webp" style="width: 60px;height: 60px">
+								<img src="../imgs/choiceness_little4.webp" style="width: 60px;height: 60px">
+							</div>
+							<div>
+								<span>￥88.0</span>
+								<span>￥18.0</span>
+								<span>￥68.0</span>
+								<span>￥58.0</span>
+							</div>
+						</div>
+						<div>
+							<img src="../imgs/choiceness_big2.webp" style="width: 300px;height: 156px;">
+							<div>
+								<img src="../imgs/choiceness_little3.webp" style="width: 60px;height: 60px">
+								<img src="../imgs/choiceness_little1.webp" style="width: 60px;height: 60px">
+								<img src="../imgs/choiceness_little4.webp" style="width: 60px;height: 60px">
+								<img src="../imgs/choiceness_little2.webp" style="width: 60px;height: 60px">
+							</div>
+							<div>
+								<span>￥39.0</span>
+								<span>￥45.9</span>
+								<span>￥18.6</span>
+								<span>￥68.0</span>
+							</div>
+						</div>
+						<div>
+							<img src="../imgs/choiceness_big3.webp" style="width: 300px;height: 156px;">
+							<div>
+							<img src="../imgs/choiceness_little4.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little2.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little3.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little1.webp" style="width: 60px;height: 60px">
+							</div>
+							<div>
+								<span>￥78.0</span>
+								<span>￥66.6</span>
+								<span>￥58.9</span>
+								<span>￥28.0</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="../imgs/choiceness_big1.webp" style="width: 300px;height: 156px;">
+							<div>
+							<img src="../imgs/choiceness_little1.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little2.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little3.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little4.webp" style="width: 60px;height: 60px">
+							</div>
+							<div>
+								<span>￥88.0</span>
+								<span>￥18.0</span>
+								<span>￥68.0</span>
+								<span>￥58.0</span>
+							</div>
+						</div>
+						<div>
+							<img src="../imgs/choiceness_big2.webp" style="width: 300px;height: 156px;">
+							<div>
+							<img src="../imgs/choiceness_little3.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little1.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little4.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little2.webp" style="width: 60px;height: 60px">
+							</div>
+							<div>
+								<span>￥39.0</span>
+								<span>￥45.9</span>
+								<span>￥18.6</span>
+								<span>￥68.0</span>
+							</div>
+						</div>
+						<div>
+							<img src="../imgs/choiceness_big3.webp" style="width: 300px;height: 156px;">
+							<div>
+							<img src="../imgs/choiceness_little4.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little2.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little3.webp" style="width: 60px;height: 60px">
+							<img src="../imgs/choiceness_little1.webp" style="width: 60px;height: 60px">
+							</div>
+							<div>
+								<span>￥78.0</span>
+								<span>￥66.6</span>
+								<span>￥58.9</span>
+								<span>￥28.0</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div id="choiceness_ctrl">
+				</div>
+			</div>
+			<div id="choiceness_right">
+				<p>流行元素</p>
+				<ul>
+					<li><a href="#"><img src="../imgs/choiceness_little11.webp" alt=""><span>新款必火小棉袄</span></a></li>
+					<li><a href="#"><img src="../imgs/choiceness_little12.webp" alt=""><span>热卖小个原宿风</span></a></li>
+					<li><a href="#"><img src="../imgs/choiceness_little12.webp" alt=""><span>热卖小个原宿风</span></a></li>
+					<li><a href="#"><img src="../imgs/choiceness_little11.webp" alt=""><span>新款必火小棉袄</span></a></li>
+					<li><a href="#"><img src="../imgs/choiceness_little11.webp" alt=""><span>新款必火小棉袄</span></a></li>
+					<li><a href="#"><img src="../imgs/choiceness_little13.webp" alt=""><span>秋外套热新新</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 猜你喜欢 -->
+		<h1>猜你喜欢</h1>
+		<div id="mabyLike">
+			<ul>
+				<li>
+					<img src="../imgs/mabyLike1.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">2017 秋季港风新款潮版修身撞色半高领男士针织衫毛衣男</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+					<span>$338.00</span>&nbsp;&nbsp;
+					<del>$499.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>1025</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike2.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_two">圣诞节礼物千纸鹤许愿糖果礼盒棒棒糖零食大礼包女友闺蜜生日</p>
+					<span>$44.00</span>
+					<del>$58.0</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>105</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike5.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">新款复古镜框男款潮韩版圆形超轻眼镜架女框文艺金属平光镜</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png">
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+					<span>$58.00</span>
+					<del>$106.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>1305</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike3.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">韩国苾旎口红不掉色不脱色滋润防水唇膏彩妆持久防脱色</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png"><br>
+					<span>$88.00</span>
+					<del>$108.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>305</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike1.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">2017 秋季港风新款潮版修身撞色半高领男士针织衫毛衣男</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+					<span>$338.00</span>&nbsp;&nbsp;
+					<del>$499.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>1025</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike5.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">新款复古镜框男款潮韩版圆形超轻眼镜架女框文艺金属平光镜</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png">
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+					<span>$58.00</span>
+					<del>$106.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>1305</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike3.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">韩国苾旎口红不掉色不脱色滋润防水唇膏彩妆持久防脱色</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png"><br>
+					<span>$88.00</span>
+					<del>$108.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>305</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike2.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_two">圣诞节礼物千纸鹤许愿糖果礼盒棒棒糖零食大礼包女友闺蜜生日</p>
+					<span>$44.00</span>
+					<del>$58.0</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>105</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike1.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">2017 秋季港风新款潮版修身撞色半高领男士针织衫毛衣男</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+					<span>$338.00</span>&nbsp;&nbsp;
+					<del>$499.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>1025</em>
+				</li>
+				<li>
+					<img src="../imgs/mabyLike3.webp" alt="">
+					<h6 hidden="hidden">找相似</h6>
+					<p class="line_one">韩国苾旎口红不掉色不脱色滋润防水唇膏彩妆持久防脱色</p>
+					<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png"><br>
+					<span>$88.00</span>
+					<del>$108.00</del>
+					<img src="../imgs/mabyLike_little3.png" class="start"><em>305</em>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="bottom">
+		<div class="content">
+			<h4>-新手帮助-</h4>
+			<span>
+			<a href="#">常见问题</a>
+			<a href="#">自助服务</a>
+			<a href="#">联系客服</a>
+			<a href="#">意见反馈</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-权益保障-</h4>
+			<span>
+			<a>全国包邮</a>
+			<a>七天无理由退货</a>
+			<a>退货运费补贴</a>
+			<a>限时发货</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-支付方式-</h4>
+			<span>
+			<a>微信支付</a>
+			<a>支付宝</a>
+			<a>白富美支付</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-移动客户端下载-</h4>
+			<span>
+			<!-- <a>蘑菇街</a><img src="../imgs/二维码.png"> -->
+			<a>美丽说</a>
+			<a>uni引力</a>
+			</span>
+		</div>
+		<hr style=" height:2px;border:none;border-top:2px solid rgb(255,87,119);width: 1210px; margin: 0px auto;">
+		<ul>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">招聘信息</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">商家入驻</a></li>
+			<li><a href="#">商家后台</a></li>
+			<li><a href="#">蘑菇商学院</a></li>
+			<li><a href="#">商家社区</a></li>
+			<li><a href="#">规则中心</a></li>
+			<li><a href="#">有害信息举报</a></li>
+			<span>@2017 Mogujie.com 杭州卷皮网络有限公司</span><br>
+			<span id="button_line2">营业执照:913301065526808764 | 网络文化经营许可证：浙江文（2016） 0349-219 | 增值电信业务经营许可证：浙B2-20110349 | 安全责任书 | 浙江网安倍 33010602002329</span>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li style="height: 80px;"></li>
+			<li>
+				<p class="bar_cart"></p>
+				<span>购物车</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="coupon"></p>
+				<span>优惠券</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="wallet"></p>
+				<span>钱包</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="footmark"></p>
+				<span>足迹</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li height="40px" hidden="hidden">
+				<p class="top" ></p>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

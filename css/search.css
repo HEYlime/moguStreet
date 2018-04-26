@@ -1,0 +1,464 @@
+.search{
+    clear: both;
+    width: 1200px;
+    height: 100px;
+    padding-left: 30px;
+}
+/* search marsk 历史记录*/
+.history{
+    position: absolute;
+    width: 310px;
+    height: 260px;
+    border: 1px solid rgb(255,0,119);
+    top: 97px;
+    left: 400px;
+    background-color: white;
+    z-index: 1;
+
+}
+.search_type{
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background-color: white;
+    border:1px solid rgb(229,229,229);
+    border-top: 1px solid rgb(255,0,119);
+    z-index: 1;
+}
+.search_type a{
+    display: inline-block;
+    width: 60px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    color: rgb(255,0,119);
+}
+.search_type a:hover{
+    width: 60px;
+    background-color: rgb(255,238,244);
+}
+
+.history p{
+    position: relative;
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+    color: rgb(153,153,153);
+}
+
+.search img#top_money{
+    width: 220px;
+    height: 90px;
+    position: absolute;
+    right:80px;
+    top: 40px;
+}
+
+.search img#logo{
+    width: 240px;
+    height: 90px;
+    /*display: inline-block;*/
+}
+.search input{
+    height: 35px;
+    width: 320px;
+    border: 1px solid rgb(255,0,119);
+    border-left: 0px;
+    position: relative;
+    top: -40px;
+    left: 140px;
+}
+.search ul{
+    width: 500px;
+    position: relative;
+    top: -40px;
+    left: 325px;
+}
+.search ul li a{
+    font-size: 14px;
+    color: rgb(153,153,153);
+}
+.search ul li a:hover{
+    font-size: 14px;
+    color: rgb(255,0,119);
+    text-decoration: underline;
+}
+.search span{
+    display: inline-block;
+    position: relative;
+    top: -40px;
+    left: -345px;
+    font-size: 14px;
+    color: rgb(255,0,119);
+    border: 1px solid rgb(255,0,119);
+    border-right: 0px;
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
+}
+.search button{
+    width: 100px;
+    height: 36px;
+    position: relative;
+    left: 78px;
+    top: -39.5px;
+    background-color: rgb(255,0,119);
+    color: white;
+    border-radius: 0px 10px 10px 0px;
+    border:none;
+}
+#fixNav_inp_down{
+    top: 15px;
+
+}
+
+
+
+#middle{
+    border-top: 2px solid rgb(255,68,102);
+}
+.sepage_head ul li a {
+    margin-left: 30px;
+    line-height: 70px;
+    width: 1250px;
+    font-size: 14px;
+}
+.sepage_filter_wrap{
+    width: 1200px;
+    margin-left: 30px;
+    border: 1px solid rgb(241,241,241);
+}
+
+.filter_item_wrap{
+    width: 1200px;
+    background-color: rgb(243,243,243);
+    float: left;
+}
+.filter_item_wrap h3{
+    display: block;
+    margin-left: 20px;
+    line-height: 50px;
+    float: left;
+    width: 100px;
+}
+.filter_right{
+    float: left;
+    background-color: rgb(250,250,250);
+    width: 1080px;
+    border-bottom: 1px dashed rgb(210,210,210);
+}
+.inner{
+    margin-left: 30px;
+    width: 1050px;
+}
+.inner ul {
+    width: 600px;
+}
+.inner ul li{
+    float: left;
+}
+.inner ul li a{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #666;
+    line-height: 50px;
+}
+.filter_right ul>li>a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.inner .mutil{
+    height: auto;
+}
+.inner .mutil i{
+    display: inline-block;
+}
+
+.inner .close{
+    height: 50px;
+    overflow: hidden;
+}
+.sub_box{
+    width: 700px;
+    height: 30px;
+    float: left;
+    margin-top: 30px;
+    text-align: center;
+}
+.sub_box span{
+   
+    font-size: 14px;
+    color: white;
+}
+.sele_confirm{
+     display: inline-block;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    background-color: rgb(255,87,119);
+    border-radius: 5px;
+}
+.sub_box .sele_cancel{
+    border: 1px solid rgb(241,241,241);
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: white;
+    color: #999;
+}
+sp{
+    display: inline-block;width: 20px;
+    height: 20px;
+    background-image: url('../imgs/search_sprite1.png');
+    background-position: 0px -97px;
+    width: 20px;
+    font-size: 12px;
+    vertical-align: middle;
+    float: right;
+    margin-top: -10px;
+    text-align: center;
+}
+sn{
+    float: right;
+    margin-right: 100px;
+    font-size: 12px;
+    margin-top: -10px;
+    text-align: center;
+}
+.sepage_filter_wrap div:nth-of-type(6) .filter_right{
+    height: 50px;
+    background-color: rgb(250,250,250);
+}
+.meta_item{
+    position: relative;
+    width: 1080px;
+    height: 60px;
+}
+.meta_item dd{
+    float: left;
+    width: 135px;
+}
+.mate_item dd ul{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+}
+.meta_item dd ul li {
+    float: left;
+    z-index: 200;
+
+}
+.meta_item dd ul li a{
+    font-size: 12px;
+    color:#999;
+}
+.meta_item dd>a{
+    width: 100px;
+    display: inline-block;
+    float: left;
+    line-height: 20px;
+    font-size: 12px;
+    color: #666;
+    border: 1px solid rgb(241,241,241);
+    background-color: #fff;
+    text-align: center;
+    margin:10px 0px 10px 30px;
+}
+.meta_item dd a i{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-color: #949494 transparent transparent;
+    border-style: solid;
+    border-width: 4px;
+    vertical-align: middle;
+    margin-left: 20px;
+
+}
+.sepage_more{
+    float: left;
+    background-color: rgb(250,250,250);
+    width: 1200px;
+    margin-top: 15px;
+    border: 1px solid rgb(241,241,241);
+}
+.sepage_more ul {
+    display: inline-block;
+}
+.sepage_more ul li{
+    float: left;
+}
+.sepage_more>span{
+    display: inline-block;
+    line-height: 35px;
+    vertical-align: top;
+    font-size: 14px;
+    color: #999;
+}
+.sepage_more ul li a{
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 35px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #666;
+}
+.spacing{
+    margin-top: 15px;
+    /*border: 1px solid rgb(241,241,241);*/
+    float: left;
+    width: 1202px;
+    margin-left: 30px;
+}
+.global_love_head_one{
+    width: 250px;
+    float: left;
+}
+.global_love_head{
+    border: 1.5px solid rgb(241,241,241);
+    height: 40px;
+}
+.global_love_head_one a{
+    display: inline-block;
+    line-height: 35px;
+    margin-left: 20px;
+    width: 50px;
+    border-right: 1px solid rgb(241,241,241);
+    font-size: 14px;
+
+}
+.global_love_head_two{
+    float: left;
+    width: 260px;
+}
+.global_love_head_two input[type=text]{
+    width: 50px;
+    height: 20px;
+    border: 1px solid rgb(241,241,241);
+}
+.global_love_head_two>span{
+    float: left;
+    line-height: 30px;
+}
+.txt{
+    width: 80px;
+    float: left;
+    margin-top: 5px;
+}
+.global_love_head_two a{
+    display: inline-block;
+    width:50px;
+    line-height: 20px;
+    border: 1px solid rgb(241,241,241);
+    margin-top: 5px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+}
+.global_love_head ul{
+    float: left;
+    width: 500px;
+    margin-top: 5px
+}
+.global_love_head ul li{
+    float: left;
+    width: 80px;
+    border: 1px solid rgb(241,241,241);
+}
+.global_love_head ul li a{
+    line-height: 20px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    font-style: 14px;
+    color: #333;
+
+}
+
+.global_love_middle{
+    margin-top: 20px;
+}
+/* 猜你喜欢 */
+#mabyLike{
+    width: 1220px;
+    height:930px;
+}
+#mabyLike ul{
+    width: 1220px;
+}
+#mabyLike ul li{
+    border: 1px solid rgb(241,241,241);
+    float: left;
+    width: 223px;
+    height: 405px;
+    margin-top: 25px;
+    margin-left: 12px;
+    background-color: white;
+    position: relative;
+
+}
+#mabyLike ul li h6{
+    position: absolute;
+    top: 300px;
+    width: 223px;
+    text-align: center;
+    z-index: 100;
+    line-height:30px;
+    background-color: rgba(216,106,136,0.9);
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+
+}
+#mabyLike ul li:hover{
+    border:1px solid rgb(255,0,119);
+
+}
+#mabyLike ul li img{
+    width: 223px;
+    height: 330px;
+}
+#mabyLike ul li img.mabyLike_icon{
+    display: inline;
+    width: 30px;
+    height: 18px;
+}
+#mabyLike ul li img.start{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-left: 40px;
+}
+#mabyLike ul li p.line_one{
+    font-size: 14px;
+    width: 223px;
+    height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#mabyLike ul li p.line_two{
+    font-size: 14px;
+}
+#mabyLike ul li span{
+    font-weight: 600;
+    font-size:15px;
+}
+
+#mabyLike ul li del{
+    font-size:14px;
+    text-decoration: line-through;
+    color: rgb(102,104,107);
+}
+#mabyLike ul li em{
+    font-style:normal;
+    font-size: 12px;
+    color: rgb(153,153,153);
+}

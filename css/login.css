@@ -1,0 +1,32 @@
+#head{
+	width: 1250px;
+	height: 100px;
+}
+#logo{
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 25px;
+}
+#logo img{
+	vertical-align: middle;
+}
+#forH1{
+	display: inline-block;
+	width: 900px;
+	border:1px solid rgb(255,192,204);
+	background: rgb(255,239,239);
+}
+#head #forH1 h1{
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: middle;
+	color: #666;
+	line-height: 25px;
+	margin-left: 30px;
+
+}
+#body{
+	position: absolute;
+	background-image: url('../imgs/login_bg.png');
+	border: 1px solid red;
+}

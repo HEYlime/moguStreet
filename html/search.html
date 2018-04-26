@@ -1,0 +1,1354 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>搜索页</title>
+	<link rel="stylesheet" type="text/css" href="../css/comm.css">
+	<link rel="stylesheet" type="text/css" href="../css/search.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('input[type=checkbox]').hide();
+			$('.sub_box').hide();
+		//筛选
+		$(".meta_item dd").hover(function() {
+			$(this).find("ul").css('display',"block");
+		}, function() {
+			$(this).find("ul").css('display',"none");
+		});
+		//点击
+		//多选
+		$(".filter_right sn").click(function(){
+			$(this).parent().find(".sub_box").css('display',"block");
+			$(this).parent().find(".inner ul").addClass('mutil');
+			$(this).css('display',"none");
+			$(this).parent().parent().find(".inner ul").toggleClass('close');
+			$(this).parent().find('input').show();
+		});
+		//更多
+		var flag = 1;
+		$(".filter_right sp").click(function(){
+			$(this).parent().find(".sub_box").css('display',"none");
+			$(this).parent().find("sn").css('display',"block");
+			$(this).parent().find(".inner ul").removeClass('mutil');
+			$(this).parent().find(".inner ul").toggleClass('close');
+			$(this).parent().find('li').show();
+			
+		});
+		//确认
+		$(".inner .sele_confirm").click(function(){
+			$(this).parent().css('display',"none");
+			$(this).parent().parent().parent().parent().find("sn").css('display',"block");
+			$(this).parent().parent().find("ul").removeClass('mutil');
+			$(this).parent().prev().find('input').hide();
+
+		});
+		//取消
+		$(".inner .sele_cancel").click(function(){
+			$(this).parent().css('display',"none");
+			$(this).parent().parent().parent().parent().find("sn").css('display',"block");
+			$(this).parent().parent().find("ul").removeClass('mutil')
+			$(this).parent().parent().parent().find(".inner ul").toggleClass('close');
+			$(this).parent().prev().find('input').hide();
+
+		});
+		//条件
+		$(".global_love_head_one a").click(function(){
+			$(".global_love_head_one a").css('color', '#000');
+			$(this).css('color', '#f36');
+		});
+
+		$('#mabyLike ul li').hover(function(){
+        $(this).find('h6').show();
+        $(this).css('cursor','pointer');
+        $($(this).find('h6').click(function(){
+            window.location.href="goods_details.html";
+        }));
+	    },function(){
+	        $(this).find('h6').hide();
+	    });
+	});
+	</script>
+</head>
+<body>
+	<div id="top">
+		<p class="home"></p>
+		<a href="#" id="index">蘑菇街首页</a>
+		<ul>
+			<li>
+				<a href="#">
+				<span>登陆</span>
+				</a>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="order"></p>
+					<span>我的订单</span>
+				</a>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="cart"></p>
+					<span>购物车</span>
+				</a>
+				<div id="shoopMarsk" hidden="hidden" class="top_marsk" style="display: none;">
+			 		<h2>购物车里没有商品！</h2>
+				</div>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<span>客户服务</span>
+					<p class="down"></p>
+				</a>
+				<div id="serviceMarsk" class="top_marsk">
+				<ul>
+					<li>消费者服务</li>
+					<li>商家中心</li>
+					<li>规则中心</li>
+				</ul>
+				</div>
+			</li>
+			<li class="top_li_line"></li>
+			<li>
+				<a href="#">
+					<p class="shop"></p>
+					<span>我的小店</span>
+					<p class="down"></p>
+				</a>
+				<div id="myshopMarsk" class="top_marsk" style="display: none;">
+				<ul>
+					<li>管理后台</li>
+					<li>商家社区</li>
+					<li>商家培训</li>
+					<li>市场入驻</li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="search">
+		<img id="logo" src="../imgs/logo.png">
+		<input type="" name="" padding-left="30px;" placeholder="秋裤"><button>搜 索</button>
+		<span>搜商品<p class="inp_down"></p>
+			<div class ="search_type" hidden="hidden">
+				<a href="#">搜商品</a>
+				<a href="#">搜店铺</a>
+			</div>
+		</span>
+		<ul>
+			<li>
+				<a href="#">袜子</a>
+				<a href="#" style="color: rgb(255,0,119);">卫衣</a>
+				<a href="#">手机壳</a>
+				<a href="#">内裤</a>
+				<a href="#">时尚套装</a>
+				<a href="#">口红</a>
+				<a href="#">牛仔裤</a>
+				<a href="#"style="color: rgb(255,0,119);">眉笔</a>
+				<a href="#">短袖T恤</a>
+				<a href="#">小白鞋</a>
+			</li>
+		</ul>
+		<img id="top_money" src="../imgs/index_top_money.png">
+		<div class="history" hidden="hidden">
+			<p>历史记录</p>
+		</div>
+	</div>
+
+
+<div id="middle">
+	<div class="sepage_wrap">
+		<!--分类-->
+		<div class="sepage_classification">
+			<div class="sepage_head">
+				<ul>
+					<li>
+						<a href="#">所有分类 ></a>
+					</li>
+				</ul>
+				<span></span>
+			</div>
+
+			<div class="sepage_filter_wrap">
+				<!--分类-->
+				<div class="filter_item_wrap clearfix">
+					<h3>分类</h3>
+					<div class="filter_right">
+						<div class="inner clearfix">
+							<ul class="close">
+								<li>
+									<a href="#">服饰鞋包</a>
+								</li>  
+								<li>
+									<a href="#">女装</a>
+								</li>  
+								<li>
+									<a href="#">套装/学生校服/工作制服</a>
+								</li>  
+								<li>
+									<a href="#">时尚套装</a>
+								</li>  
+								<li>
+									<a href="#">运动户外</a>
+								</li>  
+								<li>
+									<a href="#">运动服/休闲服装</a>
+								</li>  
+								<li>
+									<a href="#">运动套装</a>
+								</li>  
+								<li>
+									<a href="#">母婴用品</a>
+								</li>  
+								<li>
+									<a href="#">孕妇装/孕产妇用品/营养</a>
+								</li>  
+								<li>
+									<a href="#">孕妇装</a>
+								</li>  
+								<li>
+									<a href="#">套装</a>
+								</li>  
+								<li>
+									<a href="#">女士内衣/家居服</a>
+								</li>  
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!--风格-->
+				<div class="filter_item_wrap clearfix">
+					<h3>风格</h3>
+					<div class="filter_right">
+						<div class="inner">
+							<ul class="close clearfix">
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">休闲远动</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">甜美</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">简约</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">街头</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">韩系</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">学院</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">小清新</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">复古</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">百搭</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">轻熟</a>
+								</li>  
+								<li >
+									<i><input type="checkbox"></i>
+									<a href="#">通勤（OL）</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">名媛</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">轻熟</a>
+								</li>  
+								<li >
+									<i><input type="checkbox"></i>
+									<a href="#">通勤（OL）</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">名媛</a>
+								</li>  
+							</ul>
+							<div class="sub_box clearfix">
+								<span class="sele_confirm">确定</span>
+								<span class="sele_cancel">取消</span> 
+							</div>
+						</div>
+						<sn>多选</sn>
+						<sp></sp>
+					</div>
+				</div>
+
+				<!--图案-->
+				<div class="filter_item_wrap clearfix">
+					<h3>图案</h3>
+					<div class="filter_right">
+						<div class="inner">
+							<ul class="close clearfix">
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">字母/文字/数字</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">条纹</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">纯色</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">色块</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">格子</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">印花/花卉</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">碎花</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">花色</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">动物图案</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">卡通动漫</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">其他</a>
+								</li>   
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">卡通动漫</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">其他</a>
+								</li> 
+							</ul>
+							<div class="sub_box clearfix">
+								<span class="sele_confirm">确定</span>
+								<span class="sele_cancel">取消</span> 
+							</div>
+						</div>
+						<sn>多选</sn>
+						<sp></sp>
+					</div>
+				</div>
+
+				<!--材质-->
+				<div class="filter_item_wrap clearfix">
+					<h3>材质</h3>
+					<div class="filter_right">
+						<div class="inner clearfix">
+							<ul class="close clearfix">
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">牛仔布</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">针织</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">雪纺</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">复合</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">蕾丝</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">棉</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">毛呢</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">混纺</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">PU</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">麂皮</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">欧根纱</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">羊毛</a>
+								</li>
+								<li >
+									<i><input type="checkbox"></i>
+									<a href="#">羊羔毛</a>
+								</li> 
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">其他</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">羊毛</a>
+								</li>
+								<li >
+									<i><input type="checkbox"></i>
+									<a href="#">羊羔毛</a>
+								</li> 
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">其他</a>
+								</li>  
+							</ul>
+							<div class="sub_box clearfix">
+								<span class="sele_confirm">确定</span>
+								<span class="sele_cancel">取消</span> 
+							</div>
+						</div>
+						<sn>多选</sn>
+						<sp></sp>
+					</div>
+				</div>
+
+				<!--款式-->
+				<div class="filter_item_wrap clearfix">
+					<h3>款式</h3>
+					<div class="filter_right">
+						<div class="inner">
+							<ul class="close clearfix">
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">衣裤套装</a>
+								</li>  
+								<li>
+									<i><input type="checkbox"></i>
+									<a href="#">衣裙套装</a>
+								</li>  
+							</ul>
+							<div class="sub_box clearfix">
+								<span class="sele_confirm">确定</span>
+								<span class="sele_cancel">取消</span> 
+							</div>
+						</div>
+						<sn>多选</sn>
+					</div>
+				</div>
+
+				<!--筛选-->
+				<div class="filter_item_wrap clearfix">
+					<h3>筛选</h3>
+					<div class="filter_right">
+						<dl class="meta_item clearfix">
+							<dd>
+								<a href="#">元素<i></i></a>
+								<ul hidden="hidden">
+									<li>
+										<a href="#">撞色/拼色</a>
+									</li>
+									<li>
+										<a href="#">系带</a>
+									</li>
+									<li>
+										<a href="#">露肩</a>
+									</li>
+									<li>
+										<a href="#">松紧</a>
+									</li>
+									<li>
+										<a href="#">破洞</a>
+									</li>
+									<li>
+										<a href="#">纯色</a>
+									</li>
+									<li>
+										<a href="#">拼色/撞色</a>
+									</li>
+									<li>
+										<a href="#">拼接</a>
+									</li>
+									<li>
+										<a href="#">刺绣</a>
+									</li>
+									<li>
+										<a href="#">百褶</a>
+									</li>
+									<li>
+										<a href="#">蕾丝</a>
+									</li>
+									<li>
+										<a href="#">镂空</a>
+									</li>
+									<li>
+										<a href="#">口袋</a>
+									</li>
+									<li>
+										<a href="#">贴布</a>
+									</li>
+									<li>
+										<a href="#">绣花</a>
+									</li>
+									<li>
+										<a href="#">勾花</a>
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<a href="#">领型<i></i></a>
+								<ul hidden="hidden">
+									<li>
+										<a href="#">V领</a>
+									</li>
+									<li>
+										<a href="#">POLO领</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<a href="#">衣长<i></i></a>
+								<ul  hidden="hidden">
+									<li>
+										<a href="#">V领</a>
+									</li>
+									<li>
+										<a href="#">POLO领</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<a href="#">季节<i></i></a>
+								<ul  hidden="hidden">
+									<li>
+										<a href="#">V领</a>
+									</li>
+									<li>
+										<a href="#">POLO领</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<a href="#">袖长<i></i></a>
+								<ul  hidden="hidden"> 
+									<li>
+										<a href="#">V领</a>
+									</li>
+									<li>
+										<a href="#">POLO领</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<a href="#">厚薄<i></i></a>
+								<ul  hidden="hidden">
+									<li>
+										<a href="#">V领</a>
+									</li>
+									<li>
+										<a href="#">POLO领</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<a href="#">袖型<i></i></a>
+								<ul  hidden="hidden">
+									<li>
+										<a href="#">V领</a>
+									</li>
+									<li>
+										<a href="#">POLO领</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+									<li>
+										<a href="#">数据/数据</a>
+									</li>
+									<li>
+										<a href="#">数据</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- 您可能还想搜 -->
+				<div class="sepage_more">
+					<span>您可能还想搜:</span>
+					<ul>
+						<li>
+							<a href="#">卫衣</a>
+						</li>
+						<li>
+							<a href="#">牛仔裤</a>
+						</li>
+						<li>
+							<a href="#">套装三件套</a>
+						</li>
+						<li>
+							<a href="#">套装棉服</a>
+						</li>
+						<li>
+							<a href="#">短袖t恤</a>
+						</li>
+						<li>
+							<a href="#">大衣打底裙</a>
+						</li>
+						<li>
+							<a href="#">打底裤</a>
+						</li>
+						<li>
+							<a href="#">裙子套装</a>
+						</li>
+						<li>
+							<a href="#">粉红套装</a>
+						</li>
+						<li>
+							<a href="#"> 韩版套装</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!--猜你喜欢-->
+			<div class="w1200 spacing">
+					<div class="global_love">
+						<div class="global_love_head">
+					        <div class="global_love_head_one">
+					        	<a href="#">综合</a>
+					        	<a href="#">销量</a>
+					        	<a href="#">新品</a>
+					        </div>
+					        <div class="global_love_head_two">
+					        	<div class="txt">
+					        		<span>￥</span>
+					        		<input type="text">
+					        	</div>
+					        	<span>-</span>
+					        	<div class="txt">
+					        		<span>￥</span>
+					        		<input type="text">
+					        	</div>
+					        	<a href="#">确定</a>
+					        </div>
+					        <ul>
+						    	<li>
+						    		<a href="#">40-60</a>
+						    	</li>
+						    	<li>
+						    		<a href="#">60-90</a>
+						    	</li>
+						    	<li>
+						    		<a href="#">90-120</a>
+						    	</li>
+						    </ul>
+					    </div>
+					    <div class="global_love_middle">
+					    	<div id="mabyLike">
+								<ul>
+									<li>
+										<img src="../imgs/mabyLike1.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">2017 秋季港风新款潮版修身撞色半高领男士针织衫毛衣男</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+										<span>$338.00</span>&nbsp;&nbsp;
+										<del>$499.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>1025</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike2.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_two">圣诞节礼物千纸鹤许愿糖果礼盒棒棒糖零食大礼包女友闺蜜生日</p>
+										<span>$44.00</span>
+										<del>$58.0</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>105</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike5.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">新款复古镜框男款潮韩版圆形超轻眼镜架女框文艺金属平光镜</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png">
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+										<span>$58.00</span>
+										<del>$106.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>1305</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike3.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">韩国苾旎口红不掉色不脱色滋润防水唇膏彩妆持久防脱色</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png"><br>
+										<span>$88.00</span>
+										<del>$108.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>305</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike1.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">2017 秋季港风新款潮版修身撞色半高领男士针织衫毛衣男</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+										<span>$338.00</span>&nbsp;&nbsp;
+										<del>$499.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>1025</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike5.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">新款复古镜框男款潮韩版圆形超轻眼镜架女框文艺金属平光镜</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png">
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+										<span>$58.00</span>
+										<del>$106.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>1305</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike3.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">韩国苾旎口红不掉色不脱色滋润防水唇膏彩妆持久防脱色</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png"><br>
+										<span>$88.00</span>
+										<del>$108.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>305</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike2.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_two">圣诞节礼物千纸鹤许愿糖果礼盒棒棒糖零食大礼包女友闺蜜生日</p>
+										<span>$44.00</span>
+										<del>$58.0</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>105</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike1.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">2017 秋季港风新款潮版修身撞色半高领男士针织衫毛衣男</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little1.png"><br>
+										<span>$338.00</span>&nbsp;&nbsp;
+										<del>$499.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>1025</em>
+									</li>
+									<li>
+										<img src="../imgs/mabyLike3.webp" alt="">
+										<h6 hidden="hidden">找相似</h6>
+										<p class="line_one">韩国苾旎口红不掉色不脱色滋润防水唇膏彩妆持久防脱色</p>
+										<img class="mabyLike_icon" src="../imgs/mabyLike_little2.png"><br>
+										<span>$88.00</span>
+										<del>$108.00</del>
+										<img src="../imgs/mabyLike_little3.png" class="start"><em>305</em>
+									</li>
+								</ul>
+							</div>
+					    </div>
+					</div>
+			
+			</div>
+
+
+		
+
+		</div>
+	</div>
+</div>
+
+<!--监听事件-->
+<div id="monitor" hidden="hidden">
+	<div class="monitor_head w1200 spacing">
+		<div  class="logo_wrap clearfix">
+			<a href="#" title="蘑菇街|我的买手街">
+				<div>
+					<s></s>
+					<span>全部商品分类</span>
+					<p></p>
+				</div>
+			</a>
+			<!--导航栏-->
+			<div class="navigation">
+				<div class="nation">
+				<ul>
+					<li>
+						<dl>
+							<dt><a href="#">冬季新品</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">棉服<b></b></a>
+									<interval></interval>
+									<a href="#">毛呢</a>
+									<interval></interval>
+									<a href="#">毛衣</a>
+								</span>
+							</dd>
+						</dl>
+						<!--遮罩-->
+						<div>
+							<div class="mask">
+								<h1><a href="#">冬季热卖</a></h1>
+								<dl>
+									<dt class="dl_one">
+										<a href="#" class="left">当季热卖</a>
+										<a href="#" class="right">更多 <c>></c></a>
+									</dt>
+									<dd>
+										<a href="#" class="margin">初冬新品</a>
+										<a href="#" class="margin">卫衣</a>
+										<a href="#" class="margin">毛衣</a>
+										<a href="#" class="margin">精选套装</a>
+										<a href="#" class="margin">针织衫</a>
+										<a href="#" class="margin">连帽卫衣</a>
+										<a href="#" class="margin">衬衫</a>
+										<a href="#" class="margin">热卖外套</a>
+										<a href="#" class="margin">印花T恤</a>
+										<a href="#" class="margin">韩版卫衣</a>
+										<a href="#" class="margin">背心吊带</a>
+										<a href="#" class="margin">T恤</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt class="dl_two"><a href="#" class="left">流行新品</a>
+										<a href="#" class="right">更多 <c>></c></a>
+									</dt>
+									<dd>
+										<a href="#" class="margin">新款毛呢</a>
+										<a href="#" class="margin">冬季外套</a>
+										<a href="#" class="margin">棉服</a>
+										<a href="#" class="margin">加绒卫衣</a>
+										<a href="#" class="margin">马甲</a>
+										<a href="#" class="margin">羽绒服</a>
+										<a href="#" class="margin">风衣</a>
+										<a href="#" class="margin">长袖衬衫</a>
+										<a href="#" class="margin">印花T恤</a>
+										<a href="#" class="margin">皮草</a>
+										<a href="#" class="margin">长袖T恤</a>
+										<a href="#" class="margin">棒球外套</a>
+										<a href="#" class="margin">牛仔外套</a>
+										<a href="#" class="margin">短袖外套</a>
+										<a href="#" class="margin">针织开衫</a>
+										<a href="#" class="margin">牛仔衬衫</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt class="dl_three"><a href="#" class="left">潮流时尚</a>
+										<a href="#" class="right">更多 <c>></c></a>
+									</dt>
+									<dd>
+										<a href="#" class="margin">性感V领</a>
+										<a href="#" class="margin">喇叭袖</a>
+										<a href="#" class="margin">刺绣</a>
+										<a href="#" class="margin">俏皮露肩</a>
+										<a href="#" class="margin">绑带衬衫</a>
+										<a href="#" class="margin">条纹控</a>
+										<a href="#" class="margin">白衬衫</a>
+										<a href="#" class="margin">印花T恤</a>
+										<a href="#" class="margin">一字肩</a>
+										<a href="#" class="margin">情侣装</a>
+										<a href="#" class="margin">时髦皮衣</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt class="dl_four"><a href="#" class="left">品牌推荐</a>
+										<a href="#" class="right">更多 <c>></c></a>
+									</dt>
+									<dd>
+										<a href="#" class="margin">
+											<img src="images/home/middle/middle_hred_three.webp">
+										</a>
+										<a href="#" class="margin">
+											<img src="images/home/middle/middle_hred_four.webp">
+										</a>
+										<a href="#" class="margin">
+											<img src="images/home/middle/middle_hred_five.webp">
+										</a>
+										<a href="#" class="margin">
+											<img src="images/home/middle/middle_hred_six.webp">
+										</a>
+										<a href="#" class="margin">
+											<img src="images/home/middle/middle_hred_seven.webp">
+										</a>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<!--遮罩2-->
+						<div class="mask2">
+							<h1>为你推荐</h1>
+							<h2 style="color: #666">根据你购买浏览记录专门推荐</h2>
+							<a href="#">
+								<div class="explain">
+									<img src="images/home/middle/middle_hred_tj1.webp">
+										<h3>
+											大毛领保暖连帽呢子大衣女宽松显瘦百搭简约中长款加厚毛呢外套冬
+										</h3>
+										<h4>¥162.74</h4>
+									</div>
+							</a>
+							<a href="#">
+								<div class="explain2">
+									<img src="images/home/middle/middle_hred_tj2.webp">
+									<h3>
+										白色连帽棉服女冬季新款时尚加厚保暖气质修身大毛领收腰棉衣外套					
+									</h3>
+									<h4>¥178.50</h4>
+								</div>
+							</a>
+							<a href="#">
+								<div class="explain3">
+									<img src="images/home/middle/middle_hred_tj3.webp">
+									<h3>
+										2017冬季新款韩版寒冬抗寒防风保暖防风大毛领加厚面包羽绒服
+									</h3>
+									<h4>¥178.00</h4>
+								</div>
+							</a>
+							<a href="#">
+								<div class="explain4">
+									<img src="images/home/middle/middle_hred_tj4.webp">
+									<h3>
+										冬季面包服女中长款韩版宽松加厚大毛领棉衣外套加绒工装棉服
+									</h3>
+									<h4>¥169.90</h4>
+								</div>
+							</a>
+							<a href="#">
+								<div class="explain5">
+									<img src="images/home/middle/middle_hred_tj5.webp">
+									<h3>
+										冬装新款韩版中长款大毛领大衣女后背刺绣宽松面包服加厚保暖外套
+									</h3>
+									<h4>¥208.65</h4>
+								</div>
+							</a>
+							<a href="#">
+								<div class="explain6">
+									<img src="images/home/middle/middle_hred_tj6.webp">
+									<h3>
+										冬季新款学生百搭大毛领牛角扣毛呢外套韩版中长款百搭呢子大衣女
+									</h3>
+									<h4>¥169.90</h4>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">裙子</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">短裙<b></b></a>
+									<interval></interval>
+									<a href="#">长裙</a>
+									<interval></interval>
+									<a href="#">毛呢裙<b></b></a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">裤子</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">牛仔裤</a>
+									<interval></interval>
+									<a href="#">休闲裤<b></b></a>
+									<interval></interval>
+									<a href="#">打底裤</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">女鞋</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">靴子<b></b></a>
+									<interval></interval>
+									<a href="#">单鞋<b></b></a>
+									<interval></interval>
+									<a href="#">雪地靴</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">美妆</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">面膜</a>
+									<interval></interval>
+									<a href="#">护肤套装</a>
+									<interval></interval>
+									<a href="#">底妆遮瑕</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">男友</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">潮T<b></b></a>
+									<interval></interval>
+									<a href="#">休闲裤</a>
+									<interval></interval>
+									<a href="#">休闲鞋</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">家居</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">家居鞋</a>
+									<interval></interval>
+									<a href="#">四件套<b></b></a>
+									<interval></interval>
+									<a href="#">小家具</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a href="#">内衣</a>
+							</dt>
+							<dd>
+								<span>
+									<a href="#" class="first">少女内衣</a>
+									<interval></interval>
+									<a href="#">睡衣</a>
+									<interval></interval>
+									<a href="#">内裤<b></b></a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">母婴</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">孕妇装<b></b></a>
+									<interval></interval>
+									<a href="#">童装棉服</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">包包</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">斜挎包<b></b></a>
+									<interval></interval>
+									<a href="#">旅行箱</a>
+									<interval></interval>
+									<a href="#">双肩包</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">配饰</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">耳环新品<b></b></a>
+									<interval></interval>
+									<a href="#">项链</a>
+									<interval></interval>
+									<a href="#">帽子<b></b></a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">运动</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">运动套装</a>
+									<interval></interval>
+									<a href="#">运动鞋<b></b></a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">食品</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">休闲食品</a>
+									<interval></interval>
+									<a href="#">进口食品</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><a href="#">电器</a></dt>
+							<dd>
+								<span>
+									<a href="#" class="first">手机<b></b></a>
+									<interval></interval>
+									<a href="#">小家电</a>
+									<interval></interval>
+									<a href="#">手机壳</a>
+								</span>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div id="bottom">
+		<div class="content">
+			<h4>-新手帮助-</h4>
+			<span>
+			<a href="#">常见问题</a>
+			<a href="#">自助服务</a>
+			<a href="#">联系客服</a>
+			<a href="#">意见反馈</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-权益保障-</h4>
+			<span>
+			<a>全国包邮</a>
+			<a>七天无理由退货</a>
+			<a>退货运费补贴</a>
+			<a>限时发货</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-支付方式-</h4>
+			<span>
+			<a>微信支付</a>
+			<a>支付宝</a>
+			<a>白富美支付</a>
+			</span>
+		</div>
+		<div class="content">
+			<h4>-移动客户端下载-</h4>
+			<span>
+			<!-- <a>蘑菇街</a><img src="../imgs/二维码.png"> -->
+			<a>美丽说</a>
+			<a>uni引力</a>
+			</span>
+		</div>
+		<hr style=" height:2px;border:none;border-top:2px solid rgb(255,87,119);width: 1210px; margin: 0px auto;">
+		<ul>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">招聘信息</a></li>
+			<li><a href="#">联系我们</a></li>
+			<li><a href="#">商家入驻</a></li>
+			<li><a href="#">商家后台</a></li>
+			<li><a href="#">蘑菇商学院</a></li>
+			<li><a href="#">商家社区</a></li>
+			<li><a href="#">规则中心</a></li>
+			<li><a href="#">有害信息举报</a></li>
+			<span>@2017 Mogujie.com 杭州卷皮网络有限公司</span><br>
+			<span id="button_line2">营业执照:913301065526808764 | 网络文化经营许可证：浙江文（2016） 0349-219 | 增值电信业务经营许可证：浙B2-20110349 | 安全责任书 | 浙江网安倍 33010602002329</span>
+		</ul>
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li style="height: 80px;"></li>
+			<li>
+				<p class="bar_cart"></p>
+				<span>购物车</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="coupon"></p>
+				<span>优惠券</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="wallet"></p>
+				<span>钱包</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="footmark"></p>
+				<span>足迹</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li height="40px" hidden="hidden">
+				<p class="top" ></p>
+			</li>
+		</ul>
+	</div>
+
+
+</body>
+</html>

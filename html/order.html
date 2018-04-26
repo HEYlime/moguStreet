@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单生成页</title>
+	<link rel="stylesheet" type="text/css" href="../css/order.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+
+			var flag = true;
+			$('#myForm table tr td input').blur(function(event) {
+				var val = $(this).val();
+				if (val == '' || val == null) {
+					flag = false;
+					$(this).next().show();
+					$(this).css('border','1px solid rgb(250,129,126)');				
+				}else{
+					flag = true;
+					$(this).next().hide();
+					$(this).removeAttr('style');
+
+				}
+			});
+			$('#myForm table tr td textarea').blur(function(){
+				var v = $(this).val();
+				if(v == null || v.length < 5 || v.length > 35){
+					flag = false;
+					$(this).css('border', '1px solid rgb(255,129,126)');
+					$(this).parent().parent().next().find('p').css('color', 'rgb(255,129,126)');
+				}else{
+					flag = true;
+					$(this).removeAttr('style');
+					$(this).parent().parent().next().find('p').removeAttr('style');
+				}
+			});
+
+			$('#cancel').click(function(event) {
+				// event.preventDefault();
+				$('#myForm').hide();
+				$('#conf').show();
+			});
+
+			$('#sub').click(function(){
+				console.log(flag);
+				if (flag) {
+					$('#myForm').hide();
+					$('#conf').show();
+				}
+			});
+
+			$('#conf_info a').click(function(event) {
+				event.preventDefault();
+				$('#myForm').show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="top">
+		<a href="index.html">
+			<p class="home"></p>
+			蘑菇街首页
+		</a>
+		<ul>
+			<li><a href="#">qq_asdffdfd</a><p class="down"></p>
+				<div id="user" class="top_marsk" hidden="hidden">
+					<ul>
+						<li><a href="#">个人设置</a></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><a href="#">消息</a></li>
+			<li class="line">|</li>
+			<li><a href="#">我的收藏</a><p class="down"></p>
+				<div id="collection" class="top_marsk" hidden="hidden">
+					<ul>
+						<li><a href="#">收藏的商品</a></li>
+						<li><a href="#">收藏的小店</a></li>
+						<li><a href="#">浏览足迹</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><p class="order"></p><a href="myOrder.html">我的订单</a></li>
+			<li class="line">|</li>
+			<li><p class="cart"></p><a href="#">购物车<font style="color: rgb(255,0,119); font-size:12px;">2</font>件</a>
+				<div id="shopMarsk" class="top_marsk" hidden="hidden">
+			 		<ul>
+			 			<li>
+			 				<img src="../imgs/order_little1.jpg" alt="爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色">
+			 				<a href="#">爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色</a>
+			 				<span>￥89.00</span>
+			 				<p>颜色：黄 尺码：M</p>
+			 				<del>删除</del>
+			 			</li>
+			 			<li>
+			 				<img src="../imgs/order_little1.jpg" alt="爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色">
+			 				<a href="#">爱爱丸黄灿灿联名款 时尚简约连帽加厚保暖棉服外套外套多色</a>
+			 				<span>￥89.00</span>
+			 				<p>颜色：黄 尺码：M</p>
+			 				<del>删除</del>
+			 			</li>
+			 		</ul>
+			 		<hr>
+			 		<button>查看购物车</button>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><a href="#">客户服务</a><p class="down"></p>
+				<div id="serviceMarsk" class="top_marsk" hidden="hidden">
+				<ul>
+					<li><a href="#">消费者服务</a></li>
+					<li><a href="#">商家中心</a></li>
+					<li><a href="#">规则中心</a></li>
+				</ul>
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li><p class="shop"></p><a href="#">我的小店</a><p class="down"></p>
+				<div id="myshopMarsk" class="top_marsk" hidden="hidden">
+				<ul>
+					<li><a href="#">管理后台</a></li>
+					<li><a href="#">商家社区</a></li>
+					<li><a href="#">商家培训</a></li>
+					<li><a href="#">市场入驻</a></li>
+				</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="head">
+		<img src="../imgs/order_logo.png">
+		<div id="progress">
+			<div id="progress_line">
+				<i class="pro1">1</i>
+				<i class="pro2">2</i>
+			</div>
+			<div id="progress_line2">
+				
+				<i class="pro3">3</i>
+				<i class="pro4">4</i>
+			</div>
+			<p class="p1">购物车</p>
+			<p class="p2">确认订单</p>
+			<p class="p3" style="color: rgb(165,192,227)">支付</p>
+			<p class="p4" style="color: rgb(165,192,227)">完成</p>
+		</div>
+	</div>
+
+	<div id="box">
+		<div class="empty"></div>
+		<div id="content">
+		<h1>请选择收货地址</h1>
+
+			<div id="conf"  hidden="hidden">  
+				<div id="conf_info">
+					<h1>任先生</h1>
+					<p>湘潭市雨湖区和平街道</p>
+					<p>湖南省湘潭市雨湖区 411000</p>
+					<p>13873289684</p>
+					<a href="#" hidden="hidden">编辑</a>
+				</div>
+			</div>
+			<br>
+			<p class="dot">.</p><a href="#">管理员收货地址</a>
+			<p class="dot">.</p><a href="#">使用新地址</a>
+			<br>
+			<form id="myForm">
+				<table>
+					<tr>
+						<td>省：<span class="red">*</span></td>
+						<td>
+							<select>
+								<option>湖南省</option>
+								<option>天津市</option>
+								<option>上海市</option>
+							</select>
+							市：
+							<select>
+								<option>湘潭市</option>
+								<option>天津市</option>
+								<option>上海市</option>
+							</select>
+							区：
+							<select>
+								<option>雨湖区</option>
+								<option>天津市</option>
+								<option>上海市</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>邮政编码：<span class="red">*</span></td>
+						<td><input type="text" id="zip"><span class="info" hidden="hidden">请输入正确的邮政编码</span></td>
+					</tr>
+					<tr>
+						<td>街道地址：<span class="red">*</span></td>
+						<td><textarea></textarea id="addr"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><p>请填写街道地址，最少5个字，最多不能超过35个字</p></td>
+					</tr>
+					<tr>
+						<td>收货人姓名：<span class="red">*</span></td>
+						<td><input type="text" id="name"><span hidden="hidden" class="info">请输入正确的姓名</span></td>
+					</tr>
+					<tr>
+						<td>手机：<span class="red">*</span></td>
+						<td><input type="text" id="tel"><span hidden="hidden" class="info">请输入正确的手机号码</span></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input id="sub" type="button" display="visible" value="确认地址">
+							<button id="cancel" >取消</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+			
+		<h1>确认商品信息</h1>
+		<table id="info">
+			<thead>
+				<tr>
+					<td>商品</td>
+					<td>商品信息</td>
+					<td>单价（元）</td>
+					<td>单价（元）</td>
+					<td>数量</td>
+					<td>优惠</td>
+					<td>小计（元）</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="7">
+						<span>店铺：</span>
+						<em>爱爱旗舰店</em>
+						<img src="../imgs/goods_icon6.gif">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="../imgs/goods_big.PNG">
+						<a href="#" title="2017爱爱丸 冬装新款 时尚清新减龄海军领厚实保暖短款棉衣">2017爱爱丸 冬装新款 时尚清新减龄海军领厚实保暖短款棉衣</a>
+						<p>菇凉，该商品预计最晚截止1月18日发货哦</p>
+					</td>
+					<td>
+						<p>颜色：麻色</p>
+						<p>尺码：M</p>
+					</td>
+					<td>374.00</td>
+					<td>374.00</td>
+					<td>1</td>
+					<td>活动价：省188.00元</td>
+					<td>188.00元</td>
+				</tr>
+				<tr>
+					<td colspan="6">
+						<span>备注：</span>
+						<input type="text" placeholder="补充填写其他信息，如有快递不到也请留言备注">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="6">
+						<em>合计：<span>$188.00</span></em>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h1></h1>
+		<hr>
+			<p class="back"></p><a href="#">返回购物车</a>
+			<h3>共有<font style="color: rgb(255,0,119);">1</font>件商品,总计：<span style="color: rgb(255,0,119); font-size: 23px; font-weight: bold;">$149.00</span></h3>
+			<button>确认并付款 > </button>
+		</div>
+		<h6><a href="#">蘑菇街</a> | <a href="#">加入开放平台</a> © 2017 Mogujie.com,All Rights Reserved.</h6>
+	</div>
+
+	
+	<div id="sidebar">
+		<ul>
+			<li style="height: 80px;"></li>
+			<li>
+				<p class="bar_cart"></p>
+				<span>购物车</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="coupon"></p>
+				<span>优惠券</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="wallet"></p>
+				<span>钱包</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li>
+				<p class="footmark"></p>
+				<span>足迹</span>
+			</li>
+			<li class="bar_line"><hr></li>
+			<li height="40px" hidden="hidden">
+				<p class="top" ></p>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
